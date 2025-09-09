@@ -167,6 +167,7 @@ button,
     transition: all ease 0.3s;
     text-decoration: none;
 }
+
 select,
 input[type="text"],
 input[type="password"],
