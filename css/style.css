@@ -760,6 +760,7 @@ html.with-fancybox body.hide-scrollbar {
   left: 100%;
   width: 83%;
   padding: 67px 10px 67px 40px;
+  padding: 67px 10px 67px 40px;
   padding: 6.7rem 10px 6.7rem 4rem;
   overflow-y: auto;
   max-height: 100%;
@@ -1551,10 +1552,10 @@ html.with-fancybox body.hide-scrollbar {
 }
 @media (min-width: 1400px) and (max-width: 1599px) {
   .header .logo-inner-wrap {
-    width: 160px;
+    width: 140px;
   }
   .header .menu-inner-wrap {
-    font-size: 14px;
+    font-size: 12px;
     gap: 5px 0px;
   }
 }
@@ -1709,6 +1710,9 @@ html.with-fancybox body.hide-scrollbar {
 .item-tile-catalog .btn {
   width: 100%;
   z-index: 7;
+}
+.item-tile-catalog .btn .button-ico {
+  margin-right: 3px;
 }
 .item-tile-catalog.tile-head .tile-title-wrap {
   padding-top: 25px;
@@ -2173,11 +2177,7 @@ html.with-fancybox body.hide-scrollbar {
     font-size: 30px;
   }
 }
-@media (min-width: 1400px) {
-  .item-tile-catalog .tile-actions-wrap {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-  }
+@media (min-width: 1500px) {
   .item-tile-catalog .tile-action-wrap {
     width: auto;
     -ms-flex-preferred-size: auto;
@@ -2287,6 +2287,7 @@ html.with-fancybox body.hide-scrollbar {
   top: 190px;
 }
 .tiles-slider-box:has(.item-tile-review) .btn-action-ico.ico-arrow {
+  top: 280px;
   top: 280px;
   top: 28rem;
 }
@@ -2422,6 +2423,7 @@ html.with-fancybox body.hide-scrollbar {
       justify-content: center;
 }
 .more-inner-wrap .btn {
+  min-width: 272px;
   min-width: 272px;
   min-width: 27.2rem;
 }
@@ -4556,18 +4558,18 @@ input.form-clear-autofill::-webkit-contacts-auto-fill-button {
   }
   .items-wrap,
   .tile-items-wrap {
-    margin: 0 -1.6rem;
+    margin: 0 -1.2rem;
     gap: 4rem 0;
   }
   .item-wrap,
   .tile-item-wrap {
-    padding: 0 1.6rem;
+    padding: 0 1.2rem;
   }
   .slider-wrap {
-    margin: 0 -1.6rem;
+    margin: 0 -1.2rem;
   }
   .sl-wrap {
-    padding: 0 1.6rem;
+    padding: 0 1.2rem;
   }
   table:has(col.col-desktop-hide:nth-child(1)) th:nth-child(1),
   table:has(col.col-desktop-hide:nth-child(1)) td:nth-child(1) {
