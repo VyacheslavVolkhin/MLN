@@ -1,0 +1,345 @@
+<!--popup-outer-box-->
+<div class="popup-outer-box popup-login" id="popup-reg">
+	<div class="popup-box">
+		<a href="" class="btn-popup-close btn-action-ico ico-close btn-green js-popup-close"></a>
+		<div class="popup-title-wrap">
+			<div class="popup-title">Регистрация</div>
+		</div>
+		<div class="popup-content-wrap">
+			<form action="/" class="frm-popup">
+				<div class="frm-row">
+					<div class="frm-field">
+						<input type="text" class="form-input" placeholder="Имя" value="Александр">
+					</div>
+				</div>
+				<div class="frm-row">
+					<div class="frm-field">
+						<input type="text" class="form-input" placeholder="Фамилия" value="Сучков">
+					</div>
+				</div>
+				<div class="frm-row">
+					<div class="frm-field">
+						<input type="tel" class="form-input inp-error" placeholder="Номер телефона" value="+7 (495) 584-85-96">
+						<div class="frm-field-message">
+							<p><b>Этот e-mail уже используется.</b> Вы можете войти в личный кабинет или восстановить пароль?</p>
+						</div>
+						<div class="frm-field-links">
+							<p><a href="" class="js-popup-open" data-popup="popup-login">Войти в личный кабинет</a></p>
+							<p><a href="" class="js-popup-open" data-popup="popup-password-remember">Восстановить пароль</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="frm-row">
+					<div class="frm-field">
+						<input type="email" class="form-input inp-error" placeholder="E-mail (логин)" value="moder2014pro@gmail.com">
+						<div class="frm-field-message">
+							<p><b>Этот e-mail уже используется.</b> Вы можете войти в личный кабинет или восстановить пароль?</p>
+						</div>
+						<div class="frm-field-links">
+							<p><a href="" class="js-popup-open" data-popup="popup-login">Войти в личный кабинет</a></p>
+							<p><a href="" class="js-popup-open" data-popup="popup-password-remember">Восстановить пароль</a></p>
+						</div>
+					</div>
+				</div>
+
+				<div class="frm-row">
+					<div class="frm-field">
+						<input type="password" class="form-input" placeholder="Пароль для входа">
+					</div>
+				</div>
+				<div class="frm-row">
+					<div class="frm-field">
+						<!-- to "frm-field-labels" add or remove class "type-simple" or "type-middle" or "type-hard" -->
+						<div class="frm-field-labels type-simple">
+							<div class="field-labels">
+								<div class="field-label"></div>
+								<div class="field-label"></div>
+								<div class="field-label"></div>
+							</div>
+							<div class="field-label-title title-simple">Простой</div>
+							<div class="field-label-title title-middle">Средний</div>
+							<div class="field-label-title title-hard">Сложный</div>
+						</div>
+					</div>
+				</div>
+				<div class="frm-row">
+
+				</div>
+				<div class="frm-row-submit">
+					<div class="frm-field">
+						<button type="submit" class="btn btn-red btn-form btn-full" disabled>
+							<div class="button-title">Зарегистрироваться</div>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div><!--/popup-outer-box-->
+
+
+<div class="popup-outer-box popup-login" id="popup-succefull-reg">
+	<div class="popup-box">
+		<a href="" class="btn-popup-close btn-action-ico ico-close btn-green js-popup-close"></a>
+		<div class="popup-title-wrap">
+			<div class="popup-ico">
+				<img src="./img/succefull.svg" alt="">
+			</div>
+			<div class="popup-title">Регистрация прошла успешно!</div>
+			<p>Теперь вы можете пользоваться всеми возможностями сайта</p>
+		</div>
+		<div class="popup-content-wrap">
+			<div  class="frm-popup">
+				<div class="frm-row-submit">
+					<div class="frm-field">
+						<a href="" class="btn btn-red btn-form btn-full">
+							<div class="button-title">Перейти в личный кабинет</div>
+						</a>
+					</div>
+					<div class="frm-field">
+						<a href="" class="btn btn-red btn-form btn-border btn-full">
+							<div class="button-title">Перейти к покупкам</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!--/popup-outer-box-->
+
+
+<div class="popup-outer-box popup-login" id="popup-login">
+	<div class="popup-box">
+		<a href="" class="btn-popup-close btn-action-ico ico-close btn-green js-popup-close"></a>
+		<div class="popup-title-wrap">
+			<div class="popup-title">Вход в личный кабинет</div>
+		</div>
+		<div class="popup-content-wrap">
+			<form action="/" class="frm-popup">
+				<div class="frm-row js-tabs-nav">
+					<div class="frm-field field-half">
+						<a href="" class="btn btn-form btn-red btn-border btn-full active" data-tab="form01">По E-mail</a>
+					</div>
+					<div class="frm-field field-half">
+						<a href="" class="btn btn-form btn-red btn-border btn-full" data-tab="form02">По номеру</a>
+					</div>
+				</div>
+				<div class="js-tab-block frm-tab-block" data-tab="form01">
+					<div class="frm-row">
+						<div class="frm-field">
+							<div class="frm-field-title">Логин (e-mail)</div>
+							<input type="email" class="form-input" placeholder="example@example.com" value="">
+						</div>
+					</div>
+					<div class="frm-row">
+						<div class="frm-field">
+							<div class="frm-field-title">Пароль</div>
+							<input type="password" class="form-input" placeholder="Password" value="">
+							<div class="frm-field-links">
+								<p><a href="" class="js-popup-open" data-popup="popup-password-remember">Забыли пароль?</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="frm-row-submit">
+						<div class="frm-field">
+							<button type="submit" class="btn btn-red btn-form btn-full" disabled>
+								<div class="button-title">Войти в личный кабинет</div>
+							</button>
+						</div>
+						<div class="frm-field">
+							<div class="frm-field-links">
+								<p><a href="" class="js-popup-open" data-popup="popup-reg">Зарегистрироваться</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="js-tab-block frm-tab-block" data-tab="form02">
+					<div class="frm-row">
+						<div class="frm-field">
+							<div class="frm-field-title">Номер телефона</div>
+							<input type="tel" class="form-input" placeholder="+ 7 (___) ___ - __ - __" value="">
+							<div class="frm-field-message">На указанный номер будет отправлен код подтверждения</div>
+						</div>
+					</div>
+					<div class="frm-row-submit">
+						<div class="frm-field">
+							<a href="" class="btn btn-red btn-form btn-full" disabled>
+								<div class="button-title">Отправить код</div>
+							</a>
+						</div>
+						<div class="frm-field">
+							<div class="frm-field-links">
+								<p><a href="" class="js-popup-open" data-popup="popup-reg">Зарегистрироваться</a></p>
+							</div>
+						</div>
+						<div class="frm-field">
+							<div class="frm-field-info">Нажимая на кнопку “Отправить код”, я соглашаюсь с пользовательским соглашением, политикой конфиденциальности и подтверждаю согласие на получение сообщений рекламного характера.</div>
+						</div>
+					</div>
+				</div>
+			</form>
+			<div class="login-buttons-box">
+				<div class="login-title-wrap">
+					<div class="login-title">Войти через</div>
+				</div>
+				<div class="login-buttons-wrap">
+					<div class="login-button">
+						<a href="" class="btn btn-form btn-gray">
+							<div class="button-ico">
+								<img src="./img/icons/login01.svg" alt="">
+							</div>
+							<div class="button-title">Яндекс ID</div>
+						</a>
+					</div>
+					<div class="login-button">
+						<a href="" class="btn btn-form btn-gray">
+							<div class="button-ico ico-hover-light">
+								<img src="./img/icons/login02.svg" alt="">
+							</div>
+							<div class="button-title">AppleID</div>
+						</a>
+					</div>
+					<div class="login-button">
+						<a href="" class="btn btn-form btn-gray">
+							<div class="button-ico">
+								<img src="./img/icons/login03.svg" alt="">
+							</div>
+							<div class="button-title">Google</div>
+						</a>
+					</div>
+					<div class="login-button">
+						<a href="" class="btn btn-form btn-gray">
+							<div class="button-ico ico-hover-light">
+								<img src="./img/icons/login04.svg" alt="">
+							</div>
+							<div class="button-title">Вконтакте</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!--/popup-outer-box-->
+
+<div class="popup-outer-box popup-login" id="popup-password-remember">
+	<div class="popup-box">
+		<a href="" class="btn-popup-close btn-action-ico ico-close btn-green js-popup-close"></a>
+		<div class="popup-title-wrap">
+			<div class="popup-title">Восстановление пароля</div>
+		</div>
+		<div class="popup-content-wrap">
+			<form action="/" class="frm-popup">
+				<div class="frm-row">
+					<div class="frm-field">
+						<div class="frm-field-title">Адрес электронной почты указанный при регистрации на сайте</div>
+						<input type="email" class="form-input" placeholder="E-mail (логин)" value="">
+					</div>
+				</div>
+				<div class="frm-row-submit">
+					<div class="frm-field">
+						<button type="submit" class="btn btn-red btn-form btn-full">
+							<div class="button-title">Восстановить доступ</div>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div><!--/popup-outer-box-->
+
+<div class="popup-outer-box popup-login" id="popup-password-new">
+	<div class="popup-box">
+		<a href="" class="btn-popup-close btn-action-ico ico-close btn-green js-popup-close"></a>
+		<div class="popup-title-wrap">
+			<div class="popup-title">Новый пароль</div>
+		</div>
+		<div class="popup-content-wrap">
+			<form action="/" class="frm-popup">
+				<div class="frm-row">
+					<div class="frm-field">
+						<div class="frm-field-title">Введите новый пароль</div>
+						<input type="password" class="form-input" placeholder="Новый пароль для входа" value="">
+					</div>
+				</div>
+				<div class="frm-row">
+					<div class="frm-field">
+						<!-- to "frm-field-labels" add or remove class "type-simple" or "type-middle" or "type-hard" -->
+						<div class="frm-field-labels type-hard">
+							<div class="field-labels">
+								<div class="field-label"></div>
+								<div class="field-label"></div>
+								<div class="field-label"></div>
+							</div>
+							<div class="field-label-title title-simple">Простой</div>
+							<div class="field-label-title title-middle">Средний</div>
+							<div class="field-label-title title-hard">Сложный</div>
+						</div>
+					</div>
+				</div>
+				<div class="frm-row-submit">
+					<div class="frm-field">
+						<button type="submit" class="btn btn-red btn-form btn-full">
+							<div class="button-title">Сохранить и войти в ЛК</div>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div><!--/popup-outer-box-->
+
+<div class="popup-outer-box popup-login" id="popup-code">
+	<div class="popup-box">
+		<a href="" class="btn-popup-close btn-action-ico ico-close btn-green js-popup-close"></a>
+		<div class="popup-title-wrap">
+			<div class="popup-title title-small">Введите проверочный&nbsp;код</div>
+		</div>
+		<div class="popup-content-wrap">
+			<form action="/" class="frm-popup">
+				<div class="frm-row">
+					<div class="frm-field">
+						<div class="frm-field-message">Вам поступит звонок на номер <b class="link-phone">+ 7 (495) 584-62-54</b>, введите последние 4 цифры входящего номера <b class="link-phone">+7 (777) 77-<span class="text-att">77-77</span></b></div>
+						<div class="frm-field-links">
+							<p><a href="">Изменить номер</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="frm-row">
+					<div class="frm-field">
+						<div class="frm-field-code">
+							<input type="text" maxlength="1" pattern="[0-9]"  inputmode="numeric"  class="form-input">
+							<input type="text" maxlength="1" pattern="[0-9]"  inputmode="numeric"  class="form-input">
+							<input type="text" maxlength="1" pattern="[0-9]"  inputmode="numeric"  class="form-input">
+							<input type="text" maxlength="1" pattern="[0-9]"  inputmode="numeric"  class="form-input">
+						</div>
+						<div class="frm-field-info">Получить новый код через 00:16</div>
+						<div class="frm-field-links">
+							<p><b>Неверный код.</b></p>
+							<p><a href=""><b>Получить новый код</b></a></p>
+						</div>
+					</div>
+				</div>
+				<div class="frm-row-submit">
+					<div class="frm-field">
+						<button type="submit" class="btn btn-red btn-form btn-full">
+							<div class="button-title">Войти в личный кабинет</div>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div><!--/popup-outer-box-->
+
+<div class="popup-outer-box popup-login" id="popup-succefull-password">
+	<div class="popup-box">
+		<a href="" class="btn-popup-close btn-action-ico ico-close btn-green js-popup-close"></a>
+		<div class="popup-title-wrap">
+			<div class="popup-ico">
+				<img src="./img/succefull.svg" alt="">
+			</div>
+			<div class="popup-title">Проверьте почту</div>
+			<p>Ссылка для восстановления пароля отправлена на Вашу почту, перейдите по ссылке и задайте новый пароль</p>
+		</div>
+	</div>
+</div><!--/popup-outer-box-->

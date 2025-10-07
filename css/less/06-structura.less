@@ -76,6 +76,13 @@ html.with-fancybox body.hide-scrollbar {
 		flex-shrink: 0;
 	}
 }
+.wrap-inner {
+	.header {
+		border-bottom: none;
+		box-shadow: 0 0 70px 0 rgba(0, 0, 0, 0.06);
+		backdrop-filter: blur(7.5px);
+	}
+}
 .nav,
 .header,
 .footer {
@@ -621,8 +628,9 @@ html.with-fancybox body.hide-scrollbar {
 		}
 		.popup-content-block {
 			position: fixed;
+			height: 100vh;
+			height: 100dvh;
 			top: 0;
-			bottom: 0;
 			left: 0;
 			right: 0;
 			background: linear-gradient(105deg, rgba(255, 228, 236, 0.25) 4.62%, rgba(255, 255, 255, 0.00) 78.25%), linear-gradient(112deg, rgba(255, 255, 255, 0.00) 58.67%, rgba(255, 233, 241, 0.67) 100.41%), rgba(255, 255, 255, 0.95);
@@ -722,6 +730,13 @@ html.with-fancybox body.hide-scrollbar {
 	}
 }
 @media (min-width: 1024px) {
+	.wrap-inner {
+		.header {
+			border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+			box-shadow: 0 0 26px 0 rgba(0, 0, 0, 0.01);
+			backdrop-filter: none;
+		}
+	}
 	.panel-mobile-box {
 		display: none;
 	}

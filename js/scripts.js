@@ -4,7 +4,14 @@ document.addEventListener("DOMContentLoaded", function () {
     //settings
   });
 
-  
+  //tooltip
+  tippy('[data-title]', {
+		content(reference) {
+		const dataTitle = reference.getAttribute('data-title');
+		return dataTitle.replace(/\n/g, '<br>');
+	},
+	allowHTML: true
+  });
 
 
   //btn tgl and add
@@ -183,6 +190,57 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+
+  //js tabs
+  const tabsNav = document.querySelectorAll('.js-tabs-nav')
+  const tabsBlocks = document.querySelectorAll('.js-tab-block')
+  const tabsButtonTitle = document.querySelectorAll('.js-tab-title')
+  const tabsButtonContent = document.querySelectorAll('.js-tab-content')
+  function tabsActiveStart() {
+	for (iTab = 0; iTab < tabsBlocks.length; iTab++) {
+		if (tabsBlocks[iTab].classList.contains('active')) {
+			tabsBlocks[iTab].classList.remove('active')
+		}
+	}
+	for (i = 0; i < tabsNav.length; i++) {
+		let tabsNavElements = tabsNav[i].querySelectorAll('[data-tab]')
+		for (iElements = 0; iElements < tabsNavElements.length; iElements++) {
+			if (tabsNavElements[iElements].classList.contains('active')) {
+				let tabsNavElementActive = tabsNavElements[iElements].dataset.tab
+				for (j = 0; j < tabsBlocks.length; j++) {
+					if (tabsBlocks[j].dataset.tab.toString().indexOf(tabsNavElementActive) > -1) {
+						console.log(tabsBlocks[j].dataset.tab.toString().indexOf(tabsNavElementActive))
+						tabsBlocks[j].classList.add('active')
+					}
+				}
+			}
+		}
+	}
+	
+  }
+  for (i = 0; i < tabsButtonTitle.length; i++) {
+	tabsButtonTitle[i].addEventListener('click', function (e) {
+		this.classList.toggle('active')
+		e.preventDefault()
+		e.stopPropagation()
+		return false
+	})
+  }
+  for (i = 0; i < tabsNav.length; i++) {
+	tabsNav[i].addEventListener('click', function (e) {
+		if (e.target.closest('[data-tab]')) {
+			let tabsNavElements = this.querySelector('[data-tab].active')
+			tabsNavElements ? tabsNavElements.classList.remove('active') : false
+			e.target.closest('[data-tab]').classList.add('active')
+			tabsActiveStart()
+			e.preventDefault()
+			e.stopPropagation()
+			return false
+		}
+	})
+  }
+  tabsActiveStart()
+
   // Popups
   let popupCurrent;
   let popupsList = document.querySelectorAll(".popup-outer-box");
@@ -330,6 +388,81 @@ document.addEventListener("DOMContentLoaded", function () {
 			navigation: {
 				nextEl: nextEl,
 				prevEl: prevEl,
+			},
+		});
+	});
+
+
+	//slider order add
+	const slidersadd = document.querySelectorAll(".slider-add");
+	
+	slidersadd.forEach((container) => {
+		const swiperEl = container.querySelector(".swiper");
+		const nextEl = container.querySelector(".button-slider-add-next");
+		const prevEl = container.querySelector(".button-slider-add-prev");
+	
+		if (!swiperEl) return;
+	
+		new Swiper(swiperEl, {
+			loop: false,
+			slidesPerGroup: 1,
+			slidesPerView: 3,
+			spaceBetween: 0,
+			autoHeight: true,
+			speed: 400,
+			pagination: false,
+			autoplay: false,
+			navigation: {
+				nextEl: nextEl,
+				prevEl: prevEl,
+			},
+			breakpoints: {
+				1200: { slidesPerView: 4 },
+				1400: { slidesPerView: 5 },
+			},
+		});
+	});
+
+
+	//slider photos thumbs preview
+	document.querySelectorAll('.tiles-thumbs-slider-box').forEach(function(container) {
+		const thumbsEl = container.querySelector('.slider-photos-thumbs .swiper');
+		const mainEl = container.querySelector('.slider-photos-main .swiper');
+		const nextTBtn = container.querySelector('.button-slider-photos-thumbs-next');
+		const prevTBtn = container.querySelector('.button-slider-photos-thumbs-prev');
+		const mainPag = container.querySelector('.slider-photos-main-pagination');
+	
+		const swiperPhotosPreview = new Swiper(thumbsEl, {
+			loop: false,
+			slidesPerGroup: 1,
+			slidesPerView: 'auto',
+			spaceBetween: 0,
+			threshold: 5,
+			watchSlidesVisibility: true,
+			watchSlidesProgress: true,
+			freeMode: true,
+			navigation: {
+				nextEl: nextTBtn,
+				prevEl: prevTBtn,
+			},
+		});
+		const swiperPhotosMain = new Swiper(mainEl, {
+			loop: false,
+			slidesPerGroup: 1,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			autoHeight: true,
+			speed: 400,
+			threshold: 5,
+			freeMode: false,
+			watchSlidesProgress: true,
+			navigation: false,
+			pagination: {
+				el: mainPag,
+				clickable: true,
+			},
+			thumbs: {
+				swiper: swiperPhotosPreview,
 			},
 		});
 	});
