@@ -3347,6 +3347,9 @@ html.with-fancybox body.hide-scrollbar {
   .info-card-box {
     margin-bottom: 30px;
   }
+  .info-card-box .photos-inner-wrap {
+    margin-bottom: 30px;
+  }
   @supports (display: contents) {
     .info-card-box .photos-inner-wrap {
       -ms-flex-order: -1;
