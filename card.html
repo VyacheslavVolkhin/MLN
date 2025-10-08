@@ -78,10 +78,10 @@
                             <form action="/" class="frm-main-search">
                                 <input type="text" class="form-input" placeholder="Что будем искать?">
                                 <button type="submit" class="button-form btn">
-                                    <div class="button-ico">
+                                    <span class="button-ico">
                                         <img src="./img/icons/search.svg" alt="">
-                                    </div>
-                                    <div class="button-title">Найти</div>
+                                    </span>
+                                    <span class="button-title">Найти</span>
                                 </button>
                             </form>
                         </div>
@@ -1394,10 +1394,10 @@
                         <form action="/" class="frm-main-search">
                             <input type="text" class="form-input" placeholder="Что будем искать?">
                             <button type="submit" class="button-form btn">
-                                <div class="button-ico">
+                                <span class="button-ico">
                                     <img src="./img/icons/search.svg" alt="">
-                                </div>
-                                <div class="button-title">Найти</div>
+                                </span>
+                                <span class="button-title">Найти</span>
                             </button>
                         </form>
                     </div>
@@ -1441,35 +1441,35 @@
                                 <div class="slider swiper-wrapper">
                                     <!--sl-wrap-->
                                     <div class="sl-wrap swiper-slide">
-                                        <a href="./img/card01.jpg" class="elm-photo photo-cover" data-fancybox="card">
+                                        <a href="./img/card01.jpg" class="elm-photo photo-cover photo-zoom" data-fancybox="card">
                                             <img src="./img/card01.jpg" alt="">
                                         </a>
                                     </div>
                                     <!--/sl-wrap-->
                                     <!--sl-wrap-->
                                     <div class="sl-wrap swiper-slide">
-                                        <a href="./img/card02.jpg" class="elm-photo photo-cover" data-fancybox="card">
+                                        <a href="./img/card02.jpg" class="elm-photo photo-cover photo-zoom" data-fancybox="card">
                                             <img src="./img/card02.jpg" alt="">
                                         </a>
                                     </div>
                                     <!--/sl-wrap-->
                                     <!--sl-wrap-->
                                     <div class="sl-wrap swiper-slide">
-                                        <a href="./img/card03.jpg" class="elm-photo photo-cover" data-fancybox="card">
+                                        <a href="./img/card03.jpg" class="elm-photo photo-cover photo-zoom" data-fancybox="card">
                                             <img src="./img/card03.jpg" alt="">
                                         </a>
                                     </div>
                                     <!--/sl-wrap-->
                                     <!--sl-wrap-->
                                     <div class="sl-wrap swiper-slide">
-                                        <a href="./img/card01.jpg" class="elm-photo photo-cover" data-fancybox="card">
+                                        <a href="./img/card01.jpg" class="elm-photo photo-cover photo-zoom" data-fancybox="card">
                                             <img src="./img/card01.jpg" alt="">
                                         </a>
                                     </div>
                                     <!--/sl-wrap-->
                                     <!--sl-wrap-->
                                     <div class="sl-wrap swiper-slide">
-                                        <a href="./img/card02.jpg" class="elm-photo photo-cover" data-fancybox="card">
+                                        <a href="./img/card02.jpg" class="elm-photo photo-cover photo-zoom" data-fancybox="card">
                                             <img src="./img/card02.jpg" alt="">
                                         </a>
                                     </div>
@@ -1485,7 +1485,7 @@
                             <!--/stickers-inner-wrap-->
                             <!--slider-action-wrap-->
                             <div class="slider-action-wrap">
-                                <a href="" class="btn">
+                                <a href="" class="btn js-popup-open" data-popup="popup-card-composition">
                                     <div class="button-ico">
                                         <img src="./img/icons/flowers.svg" alt="">
                                     </div>
@@ -1560,7 +1560,7 @@
                     <div class="panels-inner-wrap">
                         <div class="panel-wrap">
                             <div class="elm-card-panel type-violet">
-                                <div class="panel-title">Наличие: <span class="elm-helper" data-title="Текст подсказки"></span></div>
+                                <div class="panel-title">Наличие: <span class="elm-helper type-gray" data-title="Текст подсказки"></span></div>
                                 <div class="panel-info-button">
                                     <div class="elm-ico">
                                         <img src="./img/icons/rotation.svg" alt="">
@@ -1571,6 +1571,39 @@
                         </div>
                         <div class="panel-wrap">
                             <div class="elm-card-panel type-green">
+                                <div class="panel-title">Наличие: <span class="elm-helper type-gray" data-title="Текст подсказки"></span></div>
+                                <div class="panel-info-button">
+                                    <div class="elm-ico">
+                                        <img src="./img/icons/round-plus.svg" alt="">
+                                    </div>
+                                    <div class="panel-info-title">Наличие</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-wrap">
+                            <div class="elm-card-panel type-blue">
+                                <div class="panel-title">Наличие: <span class="elm-helper type-gray" data-title="Текст подсказки"></span></div>
+                                <div class="panel-info-button">
+                                    <div class="elm-ico">
+                                        <img src="./img/icons/similar.svg" alt="">
+                                    </div>
+                                    <div class="panel-info-title">Соберем похожие</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-wrap">
+                            <div class="elm-card-panel type-att-active">
+                                <div class="panel-title">Наличие: <span class="elm-helper type-gray" data-title="Текст подсказки"></span></div>
+                                <div class="panel-info-button">
+                                    <div class="elm-ico">
+                                        <img src="./img/icons/out.svg" alt="">
+                                    </div>
+                                    <div class="panel-info-title">Нет в наличии</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-wrap">
+                            <div class="elm-card-panel type-green type-green-bg">
                                 <div class="panel-title"><span class="panel-title-main">+181 руб.</span> <span class="elm-helper" data-title="Текст подсказки"></span></div>
                                 <div class="panel-info">
                                     <div class="panel-info-title">вернем на бонусный счёт</div>
@@ -1642,11 +1675,14 @@
 
                     <div class="actions-inner-wrap">
                         <div class="action-wrap">
-                            <a href="" class="btn">
+                            <a href="" class="btn js-btn-tgl">
                                 <div class="button-ico">
                                     <img src="./img/icons/cart.svg" alt="">
                                 </div>
-                                <div class="button-title">В корзину</div>
+                                <div class="button-ico button-ico-active">
+                                    <img src="./img/icons/trash.svg" alt="">
+                                </div>
+                                <div class="button-title" data-title="В корзину" data-title-active="Убрать из корзины"></div>
                             </a>
                         </div>
                         <div class="action-wrap">
@@ -1658,10 +1694,10 @@
                             </a>
                         </div>
                         <div class="action-small-wrap">
-                            <a href="" class="btn btn-action-ico ico-fav-toggle button-active-toggle js-btn-tgl"></a>
+                            <a href="" class="btn btn-action-ico ico-fav-toggle button-active-toggle js-btn-tgl" data-title="Текст подсказки"></a>
                         </div>
                         <div class="action-small-wrap">
-                            <a href="" class="btn button-att-second btn-action-ico ico-gift"></a>
+                            <a href="" class="btn button-att-second btn-action-ico ico-gift" data-title="Текст подсказки"></a>
                         </div>
                     </div>
 
@@ -1789,7 +1825,7 @@
                         <div class="items-wrap">
                             <!--item wrap-->
                             <div class="item-wrap">
-                                <div class="item-tile-feature">
+                                <div class="item-tile-feature js-popup-open" data-popup="popup-feature-item">
                                     <div class="tile-title">Роза розовая/малиновая 40-50см</div>
                                     <div class="tile-value">Количество: <b class="text-att">7 шт.</b></div>
                                 </div>
@@ -1797,7 +1833,7 @@
                             <!--/item wrap-->
                             <!--item wrap-->
                             <div class="item-wrap">
-                                <div class="item-tile-feature">
+                                <div class="item-tile-feature js-popup-open" data-popup="popup-feature-item">
                                     <div class="tile-title">Вероника белая</div>
                                     <div class="tile-value">Количество: <b class="text-att">3 шт.</b></div>
                                 </div>
@@ -1805,7 +1841,7 @@
                             <!--/item wrap-->
                             <!--item wrap-->
                             <div class="item-wrap">
-                                <div class="item-tile-feature">
+                                <div class="item-tile-feature js-popup-open" data-popup="popup-feature-item">
                                     <div class="tile-title">Альстремерия розовая/малиновая</div>
                                     <div class="tile-value">Количество: <b class="text-att">6 шт.</b></div>
                                 </div>
@@ -1813,7 +1849,7 @@
                             <!--/item wrap-->
                             <!--item wrap-->
                             <div class="item-wrap">
-                                <div class="item-tile-feature">
+                                <div class="item-tile-feature js-popup-open" data-popup="popup-feature-item">
                                     <div class="tile-title">Фисташка</div>
                                     <div class="tile-value">Количество: <b class="text-att">2 шт.</b></div>
                                 </div>
@@ -1821,7 +1857,7 @@
                             <!--/item wrap-->
                             <!--item wrap-->
                             <div class="item-wrap">
-                                <div class="item-tile-feature">
+                                <div class="item-tile-feature js-popup-open" data-popup="popup-feature-item">
                                     <div class="tile-title">Альстремерия розовая/малиновая</div>
                                     <div class="tile-value">Количество: <b class="text-att">6 шт.</b></div>
                                 </div>
@@ -1829,7 +1865,7 @@
                             <!--/item wrap-->
                             <!--item wrap-->
                             <div class="item-wrap">
-                                <div class="item-tile-feature">
+                                <div class="item-tile-feature js-popup-open" data-popup="popup-feature-item">
                                     <div class="tile-title">Фисташка</div>
                                     <div class="tile-value">Количество: <b class="text-att">2 шт.</b></div>
                                 </div>
@@ -1837,7 +1873,7 @@
                             <!--/item wrap-->
                             <!--item wrap-->
                             <div class="item-wrap">
-                                <div class="item-tile-feature">
+                                <div class="item-tile-feature js-popup-open" data-popup="popup-feature-item">
                                     <div class="tile-title">Альстремерия розовая/малиновая</div>
                                     <div class="tile-value">Количество: <b class="text-att">6 шт.</b></div>
                                 </div>
@@ -1845,7 +1881,7 @@
                             <!--/item wrap-->
                             <!--item wrap-->
                             <div class="item-wrap">
-                                <div class="item-tile-feature">
+                                <div class="item-tile-feature js-popup-open" data-popup="popup-feature-item">
                                     <div class="tile-title">Фисташка</div>
                                     <div class="tile-value">Количество: <b class="text-att">2 шт.</b></div>
                                 </div>
@@ -1860,25 +1896,153 @@
 
             <!--tab 02-->
             <div class="tab-box js-tab-block" data-tab="tab02">
-                CONTENT
+                <h2 class="section-title">Описание</h2>
+                <p>Невероятно красивый цветочный букет, состоящий из розовых роз и альстромерий, который представлен во флористической упаковке. Розовые розы символизируют любовь, красоту и нежность, а розовая альстромерия добавляет благородства и элегантности букету. Этот букет идеально подходит для подарка в день рождения, юбилей, свадьбу или просто для выражения нежных чувств близкому человеку. Упаковка придает букету дополнительный шарм и позволяет сохранить свежесть и красоту цветов.</p>
             </div>
             <!--/tab 02-->
 
             <!--tab 03-->
-            <div class="tab-box js-tab-block" data-tab="tab03">
-                CONTENT
+            <div class="tab-box js-tab-block text-light" data-tab="tab03">
+                <h2 class="section-title">Базовый уход</h2>
+                <ol>
+                    <li>Срезать стебли под углом 1–2 см острым ножом перед постановкой в воду</li>
+                    <li>Использовать чистую прохладную воду (менять каждые 1–2 дня)</li>
+                    <li>Убирать лишние листья ниже уровня воды</li>
+                    <li>Не ставить рядом с батареями, прямым солнцем или фруктами (фрукты выделяют этилен → ускоряют увядание)</li>
+                    <li>Можно добавить питательный раствор (пакетик-кондиционер или сахар+лимонная кислота в домашних условиях)</li>
+                </ol>
+                <h2 class="section-title">Индивидуальные особенности</h2>
+                <div class="items-wrap items-inner">
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-feature-main">
+                            <div class="tile-photo-wrap">
+                                <div class="tile-photo photo-cover">
+                                    <img src="./img/i01.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="tile-info-wrap">
+                                <div class="tile-title">Розы</div>
+                                <div class="tile-info">
+                                    <ul>
+                                        <li>Перед водой снять нижние листья и шипы</li>
+                                        <li>Срез лучше делать под водой (чтобы не попадал воздух в стебель)</li>
+                                        <li>Иногда рекомендуется на пару секунд окунуть кончики стеблей в горячую воду (каутеризация)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-feature-main">
+                            <div class="tile-photo-wrap">
+                                <div class="tile-photo photo-cover">
+                                    <img src="./img/i02.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="tile-info-wrap">
+                                <div class="tile-title">Тюльпаны</div>
+                                <div class="tile-info">
+                                    <ul>
+                                        <li>«Растут» даже после срезки — могут вытягиваться из букета</li>
+                                        <li>Любят прохладную воду, менять её нужно каждый день</li>
+                                        <li>Лучше держать в прохладе (ночью можно в холодильник)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                </div>
+                <h2 class="section-title">Стоит добавить</h2>
+                <ul>
+                    <li>В среднем букет из роз стоит <span class="text-base">5–7 дней</span>, тюльпаны – <span class="text-base">3–5 дней</span></li>
+                    <li>Напоминаем: не ставить рядом с фруктами</li>
+                    <li>Использовать холодную/фильтрованную воду</li>
+                    <li>Используйте подходящие вазы</li>
+                </ul>
+                <h2 class="section-title">
+                    <span class="title-decor">Мы рады, что цветы в надежным руках!</span>
+                </h2>
             </div>
             <!--/tab 03-->
 
             <!--tab 04-->
-            <div class="tab-box js-tab-block" data-tab="tab04">
-                CONTENT
+            <div class="tab-box text-light js-tab-block" data-tab="tab04">
+                <h2 class="section-title">Наши гарантии</h2>
+                <ol>
+                    <li>Мы не виртуальная флористическая сеть -  <span class="text-base">мы самая настоящая цветочная компания</span> в Екатеринбурге. У нас есть адрес и телефон - нам можно позвонить и приехать к нам в гости.</li>
+                    <li>Служба доставки цветов “Малина” работает  <span class="text-base">с 2007 года</span>. Мы выполнили уже <span class="text-base">более 100 000 заказов</span>. У нас большой опыт, нас знают, нас рекомендуют.</li>
+                    <li>Мы всегда используем <span class="text-base">только самые свежие цветы</span> при составлении букетов. А чтобы Ваш букет стоял долго, мы бесплатно добавляем к каждому заказу средство для продления жизни срезанных цветов</li>
+                    <li>Доставку Вашего заказа осуществляет  <span class="text-base">наша курьерская служба</span>. Мы знаем, что происходит с Вашим заказом, и уверены, что он будет доставлен в срок и в полном соответствии с Вашими пожеланиями. В любой моменты Вы можете получить информацию о доставке Вашего заказа по телефону или по e-mail.</li>
+                    <li>В холодное время года все букеты доставляются в специальной  <span class="text-base">упаковке-утеплителе</span>. Мы гарантируем, что Ваш букет не будет заморожен во время доставки.</li>
+                    <li>Если Вас не устроит качество цветов в букете, или по каким-либо веским причинам Вам не понравится исполнение букета и любого другого товара, то наша компания бесплатно для Вас  <span class="text-att">произведет его замену</span>. При этом все финансовые обязательства мы берем на себя. Претензии принимаются в течении 24 часов после доставки.</li>
+                    <li>Интернет-магазин  <a href="" class="link-main">www.malina66.ru</a> действует от имени Индивидуального Предпринимателя Малининой Елены Сергеевны. Вы можете ознакомиться с <a href="" class="link-main">правоустанавливающими документами</a>.</li>
+                </ol>
             </div>
             <!--/tab 04-->
 
             <!--tab 05-->
-            <div class="tab-box js-tab-block" data-tab="tab05">
-                CONTENT
+            <div class="tab-box text-light js-tab-block" data-tab="tab05">
+                <div class="sections-inner-wrap">
+                    <div class="section-inner-wrap">
+                        <div class="section-content-wrap">
+                            <h2 class="section-title">Оплата</h2>
+                            <p class="text-lead text-base">Для Вашего удобства, мы предусмотрели несколько способов оплаты:</p>
+                            <ul>
+                                <li>Оплата банковской картой</li>
+                                <li>Оплата на Сбербанк</li>
+                                <li>Оплата при получении букета (наличные и банковская карта)</li>
+                                <li>Оплата в магазинах (ул. Крауля, 8; пр. Ак.Сахарова, 57; ул. Ак. Шварца 8/1)</li>
+                                <li>Выезд курьера за оплатой</li>
+                                <li>Перевод на счёт физического лица (Альфа Банк, Тинькоф, Точка)</li>
+                                <li>Перевод в банке (Westorn Union, Калибри, Анелик, Контакт, Юнистрим и т.д.)</li>
+                                <li>Безналичный расчёт для корпоративных клиентов</li>
+                            </ul>
+                            <p class="text-lead text-base">а также...</p>
+                            <ul class="list">
+                                <li>
+                                    <img src="./img/pay01.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="./img/pay02.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="./img/pay03.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="./img/pay04.png" alt="">
+                                </li>
+                            </ul>
+                            <p>
+                                <a href="" class="btn button-arrow">
+                                    <span class="button-title button-title-rows" data-title-mobile="Подробнее об оплате" data-title-desktop="Узнать подробнее о доставке"></span>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="section-inner-wrap">
+                        <div class="section-content-wrap">
+                            <h2 class="section-title">Доставка</h2>
+                            <p class="text-lead text-base">Доставка заказов осуществляется с 07.30 до 22.00 ежедневно. Заказы на текущий день и на утро (до 12.00) следующего дня принимаются до 20.00.</p>
+                            <ul>
+                                <li>При заказе  <span class="text-base">от 1500 рублей</span>  - доставка по Екатеринбургу (в пределах ЕКАД) осуществляется бесплатно.</li>
+                                <li>При заказе <span class="text-base">менее 1500 рублей</span> - стоимость доставки по городу 300 рублей в пределах ЕКАД.</li>
+                            </ul>
+                            <p class="text-lead text-base">Минимальная стоимость заказа <b class="text-att">700 рублей</b>. </p>
+                            <p>
+                                <a href="" class="btn button-arrow">
+                                    <span class="button-title button-title-rows" data-title-mobile="Подробнее о доставке" data-title-desktop="Узнать подробнее о доставке"></span>
+                                </a>
+                            </p>
+                            <p>
+                                <img src="./img/card-delivery.png" alt="">
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!--/tab 05-->
 
@@ -3621,7 +3785,7 @@
                     <div class="frm-row-submit">
                         <div class="frm-field">
                             <button type="submit" class="btn btn-red btn-form btn-full" disabled>
-                                <div class="button-title">Зарегистрироваться</div>
+                                <span class="button-title">Зарегистрироваться</span>
                             </button>
                         </div>
                     </div>
@@ -3696,7 +3860,7 @@
                         <div class="frm-row-submit">
                             <div class="frm-field">
                                 <button type="submit" class="btn btn-red btn-form btn-full" disabled>
-                                    <div class="button-title">Войти в личный кабинет</div>
+                                    <span class="button-title">Войти в личный кабинет</span>
                                 </button>
                             </div>
                             <div class="frm-field">
@@ -3716,7 +3880,7 @@
                         </div>
                         <div class="frm-row-submit">
                             <div class="frm-field">
-                                <a href="" class="btn btn-red btn-form btn-full" disabled>
+                                <a href="" class="btn btn-red btn-form btn-full button-disabled">
                                     <div class="button-title">Отправить код</div>
                                 </a>
                             </div>
@@ -3791,7 +3955,7 @@
                     <div class="frm-row-submit">
                         <div class="frm-field">
                             <button type="submit" class="btn btn-red btn-form btn-full">
-                                <div class="button-title">Восстановить доступ</div>
+                                <span class="button-title">Восстановить доступ</span>
                             </button>
                         </div>
                     </div>
@@ -3832,7 +3996,7 @@
                     <div class="frm-row-submit">
                         <div class="frm-field">
                             <button type="submit" class="btn btn-red btn-form btn-full">
-                                <div class="button-title">Сохранить и войти в ЛК</div>
+                                <span class="button-title">Сохранить и войти в ЛК</span>
                             </button>
                         </div>
                     </div>
@@ -3875,7 +4039,7 @@
                     <div class="frm-row-submit">
                         <div class="frm-field">
                             <button type="submit" class="btn btn-red btn-form btn-full">
-                                <div class="button-title">Войти в личный кабинет</div>
+                                <span class="button-title">Войти в личный кабинет</span>
                             </button>
                         </div>
                     </div>
@@ -3893,6 +4057,203 @@
                 </div>
                 <div class="popup-title">Проверьте почту</div>
                 <p>Ссылка для восстановления пароля отправлена на Вашу почту, перейдите по ссылке и задайте новый пароль</p>
+            </div>
+        </div>
+    </div><!--/popup-outer-box-->
+
+
+    <!--popup-outer-box-->
+    <div class="popup-outer-box popup-main" id="popup-feature-item">
+        <div class="popup-box">
+            <a href="" class="btn-popup-close btn-action-ico ico-close btn-green js-popup-close"></a>
+            <div class="popup-content-wrap">
+                <div class="popup-feature-box">
+                    <div class="photo-inner-wrap">
+                        <div class="elm-photo">
+                            <img src="./img/feature.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="info-inner-wrap">
+                        <div class="popup-title">Роза розовая/малиновая 40-50см</div>
+                        <p>Цветок роза – символ красоты, утонченность его нежных лепестков гармонично сочетается с острыми шипами. Розовые розы часто символизируют новое начало отношений, некий намек на то чувство, которое, возможно в скором будущем, разгорится во всю силу. Розовый цвет роз выражает благодарность и гордость, симпатию и сладкие мысли, нежные эмоции и чувство восхищения. Королева цветов любит уход:</p>
+                        <ol class="list-att">
+                            <li>Удалите у роз листья и шипы, которые окажутся в вазе, чтобы они не загнивали</li>
+                            <li>Погрузите стебли в емкость с водой и острым ножом обрежьте их под углом 45 градусов на расстоянии 1,5-2 см. Это увеличит площадь поступления питательных веществ, и капилляры цветка не закупорятся воздухом.</li>
+                            <li>Заполните вазу водой на 3/4. Розы быстро впитывают жидкость.</li>
+                            <li>Используйте отстоянную воду из крана. Добавьте "Крезал". </li>
+                            <li>Ежедневно меняйте воду и подрезайте стебли на 0,5-1 см. Вазу надо не просто ополаскивать, а мыть с мылом и тщательно протирать, чтобы уничтожить бактерии.</li>
+                            <li>Идеальная температура в помещении для букета роз — 18 градусов. </li>
+                        </ol>
+                        <p>Но, даже если в комнате теплее, главное — держите композицию подальше от солнца и батарей. Не ленитесь следовать несложным рекомендациям, чтобы красивые бутоны не вяли и подольше радовали Вас своей красотой.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/popup-outer-box-->
+
+
+    <!--popup-outer-box-->
+    <div class="popup-outer-box popup-main" id="popup-card-composition">
+        <div class="popup-box">
+            <a href="" class="btn-popup-close btn-action-ico ico-close btn-green js-popup-close"></a>
+            <div class="popup-content-wrap">
+                <!--info-card-box-->
+                <div class="info-card-box">
+                    <!-- photos -->
+                    <div class="photos-inner-wrap">
+                        <!--tiles-thumbs-slider-box-->
+                        <div class="tiles-thumbs-slider-box">
+                            <!-- slider main -->
+                            <div class="slider-inner-wrap slider-photos-main">
+                                <div class="slider-wrap swiper">
+                                    <div class="slider swiper-wrapper">
+                                        <!--sl-wrap-->
+                                        <div class="sl-wrap swiper-slide">
+                                            <a href="./img/card01.jpg" class="elm-photo photo-cover photo-zoom" data-fancybox="card">
+                                                <img src="./img/card01.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <!--/sl-wrap-->
+                                        <!--sl-wrap-->
+                                        <div class="sl-wrap swiper-slide">
+                                            <a href="./img/card02.jpg" class="elm-photo photo-cover photo-zoom" data-fancybox="card">
+                                                <img src="./img/card02.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <!--/sl-wrap-->
+                                        <!--sl-wrap-->
+                                        <div class="sl-wrap swiper-slide">
+                                            <a href="./img/card03.jpg" class="elm-photo photo-cover photo-zoom" data-fancybox="card">
+                                                <img src="./img/card03.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <!--/sl-wrap-->
+                                        <!--sl-wrap-->
+                                        <div class="sl-wrap swiper-slide">
+                                            <a href="./img/card01.jpg" class="elm-photo photo-cover photo-zoom" data-fancybox="card">
+                                                <img src="./img/card01.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <!--/sl-wrap-->
+                                        <!--sl-wrap-->
+                                        <div class="sl-wrap swiper-slide">
+                                            <a href="./img/card02.jpg" class="elm-photo photo-cover photo-zoom" data-fancybox="card">
+                                                <img src="./img/card02.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <!--/sl-wrap-->
+                                    </div>
+                                </div>
+                                <!--stickers-inner-wrap-->
+                                <div class="stickers-inner-wrap">
+                                    <div class="elm-sticker type-att">Хит</div>
+                                    <div class="elm-sticker type-att-second">Топ</div>
+                                    <div class="elm-sticker type-yellow">-10%</div>
+                                </div>
+                                <!--/stickers-inner-wrap-->
+                            </div>
+                            <!-- /slider main -->
+                            <!-- slider thumbs -->
+                            <div class="slider-inner-wrap slider-photos-thumbs">
+                                <div class="slider-wrap swiper">
+                                    <div class="slider swiper-wrapper">
+                                        <!--sl-wrap-->
+                                        <div class="sl-wrap swiper-slide">
+                                            <div class="elm-photo photo-cover">
+                                                <img src="./img/card01.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <!--/sl-wrap-->
+                                        <!--sl-wrap-->
+                                        <div class="sl-wrap swiper-slide">
+                                            <div class="elm-photo photo-cover">
+                                                <img src="./img/card02.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <!--/sl-wrap-->
+                                        <!--sl-wrap-->
+                                        <div class="sl-wrap swiper-slide">
+                                            <div class="elm-photo photo-cover">
+                                                <img src="./img/card03.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <!--/sl-wrap-->
+                                        <!--sl-wrap-->
+                                        <div class="sl-wrap swiper-slide">
+                                            <div class="elm-photo photo-cover">
+                                                <img src="./img/card01.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <!--/sl-wrap-->
+                                        <!--sl-wrap-->
+                                        <div class="sl-wrap swiper-slide">
+                                            <div class="elm-photo photo-cover">
+                                                <img src="./img/card02.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <!--/sl-wrap-->
+                                    </div>
+                                </div>
+                                <div class="btn-action-ico ico-arrow ico-arrow-prev button-slider button-slider-photos-thumbs-prev"></div>
+                                <div class="btn-action-ico ico-arrow ico-arrow-next button-slider button-slider-photos-thumbs-next"></div>
+                            </div>
+                            <!-- /slider thumbs -->
+                        </div>
+                        <!--/tiles-thumbs-slider-box-->
+                    </div>
+                    <!-- /photos -->
+                    <!--info-inner-wrap-->
+                    <div class="info-inner-wrap">
+
+                        <div class="top-inner-wrap">
+                            <div class="info-wrap type-bg">Код товара: <a href="" class="info-number"><b>24762</b></a></div>
+                        </div>
+
+                        <div class="title-inner-wrap">
+                            <h1 class="section-title">Букет "Сентиментальность"</h1>
+                        </div>
+
+                        <div class="info-section-wrap">
+                            <div class="info-section-price">
+                                <div class="elm-price text-att" data-unit=" ₽">4 904</div>
+                                <div class="elm-price price-old" data-unit=" ₽">6 130</div>
+                            </div>
+                        </div>
+
+                        <div class="composition-inner-wrap">
+                            <div class="section-title">Состав</div>
+                            <div class="section-content">
+                                <div class="elm-row">
+                                    <div class="row-title"><a href="">Гортензия Колумбия белая</a></div>
+                                    <div class="row-value">2 шт</div>
+                                </div>
+                                <div class="elm-row">
+                                    <div class="row-title"><a href="">Роза Кустовая розовая/малиновая</a></div>
+                                    <div class="row-value">5 шт</div>
+                                </div>
+                                <div class="elm-row">
+                                    <div class="row-title"><a href="">Хризантема кустовая белая</a></div>
+                                    <div class="row-value">5 шт</div>
+                                </div>
+                                <div class="elm-row">
+                                    <div class="row-title"><a href="">Роза розовая/малиновая 40-50см</a></div>
+                                    <div class="row-value">5 шт</div>
+                                </div>
+                                <div class="elm-row">
+                                    <div class="row-title"><a href="">Гвоздика розовая/малиновая</a></div>
+                                    <div class="row-value">6 шт</div>
+                                </div>
+                                <div class="elm-row">
+                                    <div class="row-title"><a href="">Упаковка</a></div>
+                                    <div class="row-value">1 шт</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--/info-inner-wrap-->
+                </div>
+                <!--/info-card-box-->
             </div>
         </div>
     </div><!--/popup-outer-box-->

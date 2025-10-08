@@ -1,6 +1,44 @@
 /* ----------------------------------- *\
 			items styles
 \* ----------------------------------- */
+.item-tile-feature-main {
+	display: flex;
+	position: relative;
+	border-radius: 14px;
+	border: 1px solid #FFF2F2;
+	background: #fff;
+	line-height: (18/14);
+	color: var(--clr-light);
+	padding: 19px;
+	align-items: flex-start;
+	min-height: 100%;
+	.tile-photo-wrap {
+		width: 65px;
+		flex-shrink: 0;
+	}
+	.tile-info-wrap {
+		flex: 1;
+		padding: 0 0 0 16px;
+	}
+	.tile-title {
+		display: flex;
+		align-items: center;
+		height: 65px;
+		position: relative;
+		overflow: hidden;
+		font-size: 24px;
+		font-weight: 400;
+		line-height: normal;
+	}
+	.tile-info {
+		padding: 16px 0 0 0;
+		margin: 0 0 0 -81px;
+		display: block;
+	}
+	.tile-photo {
+		border-radius: var(--smallTileRadius);
+	}
+}
 .item-tile-order-add {
 	display: flex;
 	align-items: flex-start;
@@ -86,7 +124,12 @@
 	line-height: normal;
 	color: var(--clr-light);
 	min-height: 100%;
+	transition: all ease 0.2s;
 	gap: 6px;
+	&:hover {
+		border: 1px solid #FFEBEF;
+		background: #FFF5F5;
+	}
 	.tile-info-wrap {
 		flex: 1;
 	}
@@ -200,6 +243,12 @@
 		min-height: 24px;
 	}
 }
+.type-blue {
+	border-color: var(--clr-blue);
+	.panel-info-button, .panel-title-main {
+		color: var(--clr-blue);
+	}
+}
 .type-violet {
 	border-color: var(--clr-violet);
 	.panel-info-button, .panel-title-main {
@@ -208,8 +257,6 @@
 }
 .type-green {
 	border-color: var(--clr-att-second);
-	background: #FBFFF5;
-	backdrop-filter: blur(5px);
 	.panel-info-button, .panel-title-main {
 		color: var(--clr-att-second);
 	}
@@ -219,6 +266,16 @@
 	.panel-info-button, .panel-title-main {
 		color: var(--clr-yellow);
 	}
+}
+.type-att-active {
+	border-color: var(--clr-att-active);
+	.panel-info-button, .panel-title-main {
+		color: var(--clr-att-active);
+	}
+}
+.type-green-bg {
+	background: #FBFFF5;
+	backdrop-filter: blur(5px);
 }
 .item-tile-review {
 	font-size: 16px;
@@ -443,6 +500,13 @@
 		}
 	}
     &.photo-zoom {
+		&>hover {
+			&:after {
+				width: 78px;height: 78px;
+				background-size: 32px auto;
+				background-color: var(--clr-att);
+			}
+		}
 		&:after {
 			content: "";
 			display: block;
@@ -452,11 +516,13 @@
 			transform: translate(-50%, -50%);
 			opacity: 0;
 			transition: all ease 0.2s;
-			width: 40px;height: 40px;
+			width: 72px;height: 72px;
 			border-radius: 50%;
-			background: var(--clr-att) url(../img/icons/zoom.svg);
-			background-size: 24px auto;
-			transition: all ease 0.2s;
+			background: rgba(250, 72, 107, 0.83) url(../img/icons/zoom.svg);
+			transform: translate(-50%, -50%);
+			background-size: 30px auto;
+			background-repeat: no-repeat;
+			background-position: center;
 		}
 		&:hover {
 			&:after {
@@ -670,13 +736,6 @@
 		}
 	}
 }
-.type-violet {
-	.elm-helper {
-		&:before {
-			filter: var(--filterAttToLight);
-		}
-	}
-}
 .elm-helper {
 	display: block;
 	flex-shrink: 0;
@@ -684,6 +743,11 @@
 	cursor: pointer;
 	position: relative;
 	z-index: 2;
+	&.type-gray {
+		&:before {
+			filter: var(--filterAttToLight);
+		}
+	}
 	&:before {
 		content: "";
 		display: block;
@@ -694,6 +758,40 @@
 		background-size: 100% auto;
 		top: 50%;left: 50%;
 		margin: -12px 0 0 -12px;
+	}
+}
+.elm-row {
+	display: flex;
+	align-items: flex-end;
+	position: relative;
+	font-size: 15px;
+	line-height: 20px;
+	overflow: hidden;
+	justify-content: space-between;
+	&:after {
+		content: "";
+		display: block;
+		height: 1px;
+		border-top: 1px dashed #DBDBDB;
+		width: auto;
+		flex: 1;
+		order: 2;
+		margin-bottom: 0.4em;
+	}
+	.row-title {
+		padding: 0 5px 0 0;
+		position: relative;
+		z-index: 2;
+		order: 1;
+	}
+	.row-value {
+		flex-shrink: 0;
+		text-align: right;
+		max-width: 30%;
+		padding: 0 0 0 5px;
+		z-index: 2;
+		position: relative;
+		order: 3;
 	}
 }
 @media (min-width: 600px) {
@@ -718,6 +816,29 @@
 	}
 }
 @media (min-width: 1024px) {
+	.item-tile-feature-main {
+		font-size: 16px;
+		line-height: (20/16);
+		padding: 2.9rem;
+		.tile-info-wrap {
+			padding-left: 2.7rem;
+		}
+		.tile-photo-wrap {
+			width: 15.9rem;
+		}
+		.tile-info {
+			margin-left: -18.6rem;
+		}
+		.tile-title {
+			font-size: 2.8rem;
+			height: 15.9rem;
+		}
+		li {
+			&:before {
+				top: 10px;
+			}
+		}
+	}
 	.item-tile-feature {
 		.tile-title {
 			font-size: (18/15em);
@@ -820,6 +941,26 @@
 			}
 			.tile-title {
 				font-size: 30px;
+			}
+		}
+	}
+}
+@media (min-width: 1400px) {
+	.item-tile-feature-main {
+		.tile-title {
+			height: auto;
+			display: block;
+			margin: 0 0 12px 0;
+			line-height: 1;
+		}
+		.tile-info {
+			margin: 0;
+			padding: 0;
+		}
+		ul li {
+			margin-bottom: 5px;
+			&:last-child {
+				margin-bottom: 0;
 			}
 		}
 	}

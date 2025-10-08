@@ -14,6 +14,7 @@
 	--clr-succefull: #32B782;
 	--clr-yellow: #FFC417;
 	--clr-violet: #9B1DA2;
+	--clr-blue: #12919A;
 
 	--mainTileRadius: 20px;
 	--smallTileRadius: 10px;
@@ -71,6 +72,64 @@ p, ul, ol, table, blockquote, .bq-text {
 }
 li {
 	position: relative;
+	padding-left: 17px;
+	&:before {
+		content: "";
+		display: block;
+		width: 7px;height: 7px;
+		position: absolute;
+		left: 0;
+		top: 0.57em;
+		margin-top: -4px;
+		border-radius: 50%;
+		background: var(--clr-att);
+	}
+}
+ol {
+	counter-reset: li; 
+	list-style: none;
+	&.list-att {
+		li {
+			padding: 0;
+			&:before {
+				content: counter(li) ') '; 
+				display: inline;
+				position: static;
+				margin: 0;
+				padding: 0;
+				line-height: inherit;
+				font-size: inherit;
+				text-align: left;
+				font-weight: 600;
+				color: var(--clr-att);
+				background: none;
+				border-radius: 0;
+			}
+		}
+	}
+	li {
+		position: relative;
+		padding-left: 33px;
+		&:before {
+			content: counter(li); 
+			counter-increment: li; 
+			display: block;
+			position: absolute;
+			width: 24px;height: 24px;
+			line-height: 24px;
+			text-align: center;
+			margin-top: -12px;
+			border-radius: 50%;
+			color: var(--clr-att);
+			font-size: 17px;
+			font-weight: 500;
+			color: #fff;
+			top: 50%;
+		}
+		&:nth-child(9)~li:before {
+			content: counter(li);
+		}
+	}
 }
 .menu, .list {
     margin: 0;

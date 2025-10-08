@@ -431,8 +431,8 @@ document.addEventListener("DOMContentLoaded", function () {
 		const nextTBtn = container.querySelector('.button-slider-photos-thumbs-next');
 		const prevTBtn = container.querySelector('.button-slider-photos-thumbs-prev');
 		const mainPag = container.querySelector('.slider-photos-main-pagination');
-	
-		const swiperPhotosPreview = new Swiper(thumbsEl, {
+		const isInsidePopup = container.closest('.popup-box') !== null;
+		const previewParams = {
 			loop: false,
 			slidesPerGroup: 1,
 			slidesPerView: 'auto',
@@ -444,8 +444,17 @@ document.addEventListener("DOMContentLoaded", function () {
 			navigation: {
 				nextEl: nextTBtn,
 				prevEl: prevTBtn,
-			},
-		});
+			}
+		};
+		if (isInsidePopup) {
+			previewParams.direction = 'vertical';
+			previewParams.breakpoints = {
+				768: {
+					direction: 'horizontal',
+				},
+			};
+		}
+		const swiperPhotosPreview = new Swiper(thumbsEl, previewParams);
 		const swiperPhotosMain = new Swiper(mainEl, {
 			loop: false,
 			slidesPerGroup: 1,
@@ -468,5 +477,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 
-
 });
+
+

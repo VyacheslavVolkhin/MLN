@@ -134,6 +134,11 @@ select.form-input {
             }
         }
     }
+	.button-title-rows {
+		text-align: left;
+		flex: 1;
+		white-space: normal;
+	}
     &.active {
         .button-title {
             &[data-title-active] {
@@ -241,6 +246,22 @@ select.form-input {
 				margin-right: 0;
 			}
 		}
+	}
+	.button-ico-active {
+		display: none;
+	}
+	&.active {
+		&:has(.button-ico-active) {
+			.button-ico {
+				display: none;
+			}
+			.button-ico-active {
+				display: block;
+			}
+		}
+	}
+	[data-title-mobile]:before {
+		content: attr(data-title-mobile);
 	}
 }
 .button-tab {
@@ -734,6 +755,11 @@ select.form-input {
 	}
 }
 @media (min-width: 1024px) {
+	.btn {
+		[data-title-desktop]:before {
+			content: attr(data-title-desktop);
+		}
+	}
 	.button-tab {
 		height: 49px;
 		font-size: 18px;
