@@ -4339,7 +4339,8 @@ html.with-fancybox body.hide-scrollbar {
     width: auto;
   }
   .info-card-box .action-wrap .btn {
-    padding: 0 14px;
+    padding: 0 12px;
+    font-size: 15px;
   }
   .info-card-box .action-wrap .btn .button-ico {
     margin-right: 4px;
@@ -4362,6 +4363,8 @@ html.with-fancybox body.hide-scrollbar {
   .info-card-box .info-second-wrap {
     padding: 0 2.5rem;
   }
+}
+@media (min-width: 1600px) {
   .info-card-box .action-wrap {
     min-width: 19rem;
   }
