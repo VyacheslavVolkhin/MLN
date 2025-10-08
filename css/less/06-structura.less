@@ -141,6 +141,64 @@ html.with-fancybox body.hide-scrollbar {
 		flex-shrink: 0;
 	}
 	
+	.action-phone {
+		position: relative;
+		.popup-content-block {
+			display: none;
+			margin-top: 10px;
+			position: absolute;
+			top: 100%;
+			right: 0;
+			width: 306px;
+			z-index: 20;
+			background: #fff;
+			padding: 30px;
+			border-radius: 10px;
+			box-shadow: 0 4px 29px 0 rgba(0, 0, 0, 0.05);
+		}
+		.dropdown-contacts-box {
+			.section-phone {
+				font-size: 28px;
+			}
+			.section-title {
+				margin-top: 5px;
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+			.btn-action-ico {
+				box-shadow: none;
+				&.button-tg {
+					border-color: #27A3E2;
+					&:hover {
+						border-color: #27A3E2;
+						background-color: #27A3E2;
+					}
+				}
+				&.button-vk {
+					border-color: #0173F7;
+					&:hover {
+						border-color: #0173F7;
+						background-color: #0173F7;
+					}
+				}
+				&.button-wa {
+					border-color: #01B637;
+					&:hover {
+						border-color: #01B637;
+						background-color: #01B637;
+					}
+				}
+				&.button-ok {
+					border-color: #F77300;
+					&:hover {
+						border-color: #F77300;
+						background-color: #F77300;
+					}
+				}
+			}
+		}
+	}
 	.action-search {
 		position: relative;
 		.active~.popup-content-block {
@@ -545,6 +603,38 @@ html.with-fancybox body.hide-scrollbar {
 		}
 	}
 }
+.dropdown-contacts-box {
+	display: block;
+	position: relative;
+	line-height: 1.1;
+	.section-title {
+		display: block;
+		font-size: 14px;
+		line-height: 18px;
+		font-weight: 400;
+		color: var(--clr-light);
+		margin: 10px 0 5px 0;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	.section-phone {
+		display: block;
+		font-size: 30px;
+		font-weight: 600;
+	}
+	.section-buttons {
+		display: flex;
+		gap: 8px;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		.button-soc {
+			width: 38px;height: 38px;
+			flex-shrink: 0;
+			margin: 0;
+		}
+	}
+}
 @media (max-width: 1023px) {
     .section-mobile-full {
         margin-left: calc(var(--paddingContainer) * -1);
@@ -798,6 +888,7 @@ html.with-fancybox body.hide-scrollbar {
 				border: 1px solid #f8f8f8;
 				box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.03);
 			}
+
 		}
 		.action-wrap {
 			.btn-action-ico {
