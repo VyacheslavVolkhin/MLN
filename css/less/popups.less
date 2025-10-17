@@ -1,6 +1,67 @@
 /* ----------------------------------- *\
 			popups
 \* ----------------------------------- */
+.popup-cart-added-box {
+	padding: 3rem 3rem 4rem 3rem;
+	text-align: center;
+	.elm-ico {
+		width: 5rem;height: 5rem;
+		margin: 0 auto;
+	}
+	.popup-added-title {
+		display: block;
+		margin: 8px 0 0 0;
+		font-size: 2.6rem;
+		font-weight: 400;
+		line-height: 1;
+	}
+}
+.popup-order-box {
+	.items-wrap {
+		margin: 0;
+		gap: 20px 0;
+	}
+	.item-wrap {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+	.form-inner-wrap {
+		margin-top: 30px;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	.frm-title-wrap {
+		margin-bottom: 20px;
+	}
+	.frm-title {
+		font-size: 2.3rem;
+		font-weight: 400;
+		margin: 0;
+		max-width: (740/23em);
+		line-height: normal;
+	}
+	.frm-row, .frm-row-submit {
+		margin: 0;
+	}
+	.frm-row-submit {
+		.btn {
+			width: 100%;
+		}
+	}
+	.frm-field {
+		width: 100%;
+		padding: 0;
+		margin-bottom: 2rem;
+	}
+	.frm-select {
+		margin-bottom: 15px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
 .popup-box {
 	.info-card-box {
 		margin: 0;
@@ -150,6 +211,18 @@ body.popup-open {
 		display: flex;
 	}
 }
+.popup-cart-added {
+		.popup-box {
+			padding: 0;
+			width: 38rem;
+		}
+		&.popup-main {
+			.popup-box {
+				width: 38rem;
+				padding: 0;
+			}
+		}
+	}
 .popup-main {
 	.popup-box {
 		border-radius: 16px;
@@ -168,6 +241,13 @@ body.popup-open {
 		max-width: 100%;
 		max-height: inherit;
 		z-index: 20;
+		.popup-title-wrap {
+			margin-bottom: 2.5rem;
+		}
+		.popup-title {
+			font-size: 24px;
+			line-height: 1.1;
+		}
 		.btn-action-ico {
 			&.ico-close {
 				width: 30px;height: 30px;
@@ -562,8 +642,17 @@ body.popup-open {
 			.btn-popup-close {
 				top: 18px;right: 18px;
 			}
+			.popup-title {
+				font-size: 30px;
+			}
 		}
 	}
+	.popup-fast-order {
+		.popup-box {
+			width: 600px;
+		}
+	}
+	
 	.popup-contacts {
 		.popup-box {
 			width: 1134px;
@@ -612,6 +701,25 @@ body.popup-open {
 	}
 }
 @media (min-width: 1024px) {
+	.popup-fast-order {
+		.popup-box {
+			width: 1010px;
+		}
+	}
+	.popup-order-box {
+		.form-inner-wrap {
+			.form-input {
+				height: 56px;
+			}
+		}
+		.frm-select {
+			label {
+				padding-left: 28px;
+				font-size: 15px;
+				line-height: 18px;
+			}
+		}
+	}
 	.popup-box {
 		.info-card-box {
 			.title-inner-wrap {
@@ -649,6 +757,13 @@ body.popup-open {
 			}
 			.popup-title {
 				font-size: 21px;
+			}
+		}
+	}
+	.popup-main {
+		.popup-box {
+			.popup-title {
+				font-size: 4.6rem;
 			}
 		}
 	}

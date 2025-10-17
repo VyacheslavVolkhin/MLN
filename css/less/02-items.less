@@ -1,6 +1,96 @@
 /* ----------------------------------- *\
 			items styles
 \* ----------------------------------- */
+.item-tile-cart {
+	display: flex;
+	padding: 21px 2.7rem;
+	border-radius: 20px;
+	border: 1px solid #FFF2F2;
+	background: linear-gradient(0deg, #FFF 0%, #FFF9FA 50%, #FFF 100%);
+	position: relative;
+	font-size: 16px;
+	line-height: (20/16);
+	text-align: left;
+	font-weight: 400;
+	.tile-photo-wrap {
+		width: 136px;
+		flex-shrink: 0;
+	}
+	.tile-info-wrap {
+		flex: 1;
+		padding-left: 2rem;
+		padding-right: 3rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.tile-side-wrap {
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+	}
+	.tile-counter-wrap {
+		width: 116px;
+		flex-shrink: 0;
+	}
+	.tile-total-wrap {
+		width: 19.8rem;
+		flex-shrink: 0;
+		padding-left: 5.8rem;
+		.tile-price {
+			font-size: 2.3rem;
+			font-weight: 500;
+			&.price-old {
+				font-size: 16px;
+			}
+		}
+	}
+	.tile-title-wrap {
+		margin-bottom: 12px;
+	}
+	.tile-select-wrap {
+		display: flex;
+		gap: 6px;
+		flex-wrap: wrap;
+		margin-bottom: 14px;
+	}
+	.tile-price-info {
+		.tile-price {
+			display: inline;
+			font-weight: 500;
+		}
+	}
+	.tile-photo {
+		aspect-ratio: 1;
+		border-radius: 10px;;
+	}
+	.tile-title {
+		font-size: 20px;
+		margin-bottom: 12px;
+		font-weight: 500;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		a {
+			display: block;
+			&:not(:hover) {
+				color: inherit;
+			}
+		}
+	}
+	.frm-select-button {
+		flex-shrink: 0;
+	}
+	.tile-button-del {
+		width: 30px;height: 30px;
+		position: absolute;
+		z-index: 2;
+		top: 11px;right: 11px;
+		&:before {
+			background-size: 20px auto;
+		}
+	}
+}
 .item-tile-feature-main {
 	display: flex;
 	position: relative;
@@ -794,6 +884,19 @@
 		order: 3;
 	}
 }
+@media (max-width: 1023px) {
+	.item-tile-cart {
+		display: block;
+		.tile-info-wrap {
+			padding-right: 0;
+			padding-left: 0;
+			margin: 20px 0;
+		}
+		.tile-photo-wrap {
+			width: 100px;
+		}
+	}
+}
 @media (min-width: 600px) {
 	.item-tile-catalog {
 		&.tile-head {
@@ -812,6 +915,13 @@
 				left: 0;
 				right: 0;
 			}
+		}
+	}
+}
+@media (max-width: 767px) {
+	.item-tile-cart {
+		.tile-total-wrap {
+			padding-left: 20px;
 		}
 	}
 }
