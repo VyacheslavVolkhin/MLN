@@ -53,6 +53,78 @@ document.addEventListener("DOMContentLoaded", function () {
     //settings
   });
 
+
+
+  //datepicker
+    const datepickers = document.querySelectorAll('.inp-datepicker');
+    
+    datepickers.forEach(function(datepicker) {
+        flatpickr(datepicker, {
+            dateFormat: "d.m.Y",
+            locale: "ru",
+            allowInput: true,
+            clickOpens: true,
+            enableTime: false,
+            yearSelector: true,
+            //minDate: new Date().getFullYear() - 20 + "-01-01",
+            //maxDate: new Date().getFullYear() + 10 + "-12-31",
+            position: "auto",
+            onOpen: function(selectedDates, dateStr, instance) {
+            },
+            
+            onClose: function(selectedDates, dateStr, instance) {
+            }
+        });
+    });
+
+  //select toggle content visibility
+	const inputs = document.querySelectorAll(
+	  "input[data-content], input[data-content-check], input[data-content-uncheck]"
+	);
+  
+	inputs.forEach(function (input) {
+	  toggleContent(input);
+	});
+  
+	inputs.forEach((input) => {
+	  input.addEventListener("click", function () {
+		document.querySelectorAll(".frm-content").forEach((content) => {
+		  content.classList.remove("active");
+			});
+  
+		inputs.forEach(toggleContent);
+		});
+	});
+  
+	document.querySelectorAll(".btn[data-content]").forEach((button) => {
+	  button.addEventListener("click", function () {
+		let dataContent = this.getAttribute("data-content");
+		this.disabled = true;
+		document
+		  .querySelectorAll('.frm-content[data-content="' + dataContent + '"]')
+		  .forEach((content) => {
+			content.classList.add("active");
+			});
+		return false;
+		});
+	});
+  
+	function toggleContent(input) {
+	  let selectContent;
+	  if (input.checked) {
+		selectContent =
+		  input.getAttribute("data-content-check") ||
+		  input.getAttribute("data-content");
+		} else {
+		selectContent = input.getAttribute("data-content-uncheck");
+		}
+	  document
+		.querySelectorAll('.frm-content[data-content="' + selectContent + '"]')
+		.forEach((content) => {
+		  content.classList.add("active");
+		});
+	}
+
   //tooltip
   tippy("[data-title]", {
     content(reference) {
