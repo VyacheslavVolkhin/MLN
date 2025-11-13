@@ -919,6 +919,7 @@ html.with-fancybox body.hide-scrollbar {
 		}
 		.active {
 			&~.popup-content-block {
+				opacity: 1;
 				transform: translate(0, 0);
 			}
 			&~.elm-overlay {
@@ -935,6 +936,7 @@ html.with-fancybox body.hide-scrollbar {
 			transform: translate(-120%, 0);
 			margin-left: -50dvw;
 			background: linear-gradient(105deg, rgba(255, 228, 236, 0.25) 4.62%, rgba(255, 255, 255, 0.00) 78.25%), linear-gradient(112deg, rgba(255, 255, 255, 0.00) 58.67%, rgba(255, 233, 241, 0.67) 100.41%), rgba(255, 255, 255, 0.95);
+			opacity: 0;
 			backdrop-filter: blur(4px);
 			max-height: 100%;;
 			height: 100%;
