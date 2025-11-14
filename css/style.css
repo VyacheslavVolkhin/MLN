@@ -5540,11 +5540,6 @@ html.with-fancybox body.hide-scrollbar {
     font-size: 13px;
   }
 }
-@media (min-width: 390px) {
-  .form-order-box .field-mobile-half {
-    width: 50%;
-  }
-}
 @media (min-width: 600px) {
   .tiles-box:has(.tile-head) .items-wrap {
     display: -ms-grid;
@@ -5576,12 +5571,6 @@ html.with-fancybox body.hide-scrollbar {
   }
 }
 @media (min-width: 640px) {
-  .form-order-box .row-select .frm-field {
-    width: 33.33%;
-  }
-  .form-order-box .field-half {
-    width: 50%;
-  }
   .info-card-box .panel-wrap {
     width: calc(50% - 4px);
   }
@@ -5618,6 +5607,12 @@ html.with-fancybox body.hide-scrollbar {
   }
 }
 @media (min-width: 768px) {
+  .form-order-box .row-select .frm-field {
+    width: 33.33%;
+  }
+  .form-order-box .field-half {
+    width: 50%;
+  }
   .page-message-box {
     padding-left: 70px;
     position: relative;
