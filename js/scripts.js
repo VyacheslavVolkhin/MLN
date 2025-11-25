@@ -138,6 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let tglButtons = document.querySelectorAll(".js-btn-tgl");
   let addButtons = document.querySelectorAll(".js-btn-add");
   let buttonsTglOne = document.querySelectorAll(".js-btn-tgl-one");
+  let buttonsTglOneCatalog = document.querySelectorAll(".js-menu-catalog-toggle");
   for (i = 0; i < tglButtons.length; i++) {
     tglButtons[i].addEventListener("click", function (e) {
       this.classList.contains("active")
@@ -170,6 +171,24 @@ document.addEventListener("DOMContentLoaded", function () {
             btn.classList.remove("active");
           });
         this.classList.add("active");
+      }
+      return false;
+    });
+  });
+  buttonsTglOneCatalog.forEach(function (button) {
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+      let toggleButtonsWrap = this.closest(".js-toggle-menu-buttons");
+
+      if (this.closest('.btn-catalog-menu').classList.contains("active")) {
+        this.closest('.btn-catalog-menu').classList.remove("active");
+      } else {
+        toggleButtonsWrap
+          .querySelectorAll(".js-btn-tgl-one")
+          .forEach(function (btn) {
+            btn.classList.remove("active");
+          });
+        this.closest('.btn-catalog-menu').classList.add("active");
       }
       return false;
     });
