@@ -292,6 +292,12 @@ select.form-input {
 	border-bottom: 1px solid #969696;
 	background: none;
 	color: var(--clr-light);
+	&.button-tab-small {
+		height: 37px;
+		padding: 0 15px;
+		font-size: 18px;
+		font-weight: 500;
+	}
 	.button-title {
 		display: block;
 		padding-top: 1px;
@@ -307,6 +313,20 @@ select.form-input {
 		border-bottom-color: var(--clr-att);
 		color: #fff;
 		border-radius: var(--mainButtonRadius);
+	}
+}
+.button-arrow-more {
+	.button-title {
+		&:after {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			margin: -2px 0 0 0;
+			width: 16px;
+			height: 16px;
+			background: url(../img/icons/arrow-next.svg) center no-repeat;
+			background-size: 100% auto;
+		}
 	}
 }
 .button-arrow {
@@ -356,7 +376,7 @@ select.form-input {
 	&:hover {
 		background-color: var(--clr-att-active);
 		border-color: var(--clr-att-active);
-		color: var(--clr-att-active);
+		color: #fff;
 		.button-ico, &:before, &:after {
 			filter: var(--filterWhite);
 		}
@@ -666,6 +686,29 @@ select.form-input {
 			rotate: 90deg;
 		}
 	}
+	&.ico-arrow-toggle {
+		&:before {
+			background-image: url(../img/icons/arrow-select.svg);
+			filter: var(--filterAttToLight);
+			background-size: 28px auto;
+		}
+		&:hover {
+			&:before {
+				filter: none;
+			}
+		}
+		&.active {
+			&:before {
+				transform: rotate(180deg);
+				filter: none;
+			}
+		}
+	}
+	&.ico-arrow-go {
+		&:before {
+			background-image: url(../img/icons/arrow-go.svg);
+		}
+	}
     &.ico-arrow {
         z-index: 20;
         cursor: pointer;
@@ -818,6 +861,16 @@ select.form-input {
 		margin-top: -4px;
 	}
 }
+@media (max-width: 1023px) {
+	.button-medium-mobile {
+		height: 44px;
+		padding: 0 19px;
+		font-size: 18px;
+		font-weight: 500;
+		border-radius: var(--smallButtonRadius);
+		letter-spacing: normal;
+	}
+}
 @media (min-width: 1024px) {
 	.btn {
 		[data-title-desktop]:before {
@@ -827,6 +880,12 @@ select.form-input {
 	.button-tab {
 		height: 49px;
 		font-size: 18px;
+		&.button-tab-small {
+			height: 49px;
+			padding: 0 20px;
+			font-size: 18px;
+			font-weight: 500;
+		}
 		&:not(:hover, .active) {
 			color: #CECECE;
 			border-bottom-color: #CECECE;
@@ -883,3 +942,4 @@ select.form-input {
 		}
 	}
 }
+

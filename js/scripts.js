@@ -1,4 +1,21 @@
+
+
 document.addEventListener("DOMContentLoaded", function () {
+
+
+	//lk-menu-toggle
+	const menuToggleButtons = document.querySelectorAll('.js-btn-menu-toggle');
+	if (menuToggleButtons) {
+		menuToggleButtons.forEach(button => {
+			button.addEventListener('click', (e) => {
+				document.body.classList.toggle('lk-menu-show');
+				e.preventDefault()
+			});
+		});
+	}
+	
+	
+	
   //filter
   const formFilter = document.getElementById("mainFilterForm");
   const globalResetBtn = document.getElementById("globalResetBtn");
@@ -646,4 +663,32 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       });
     });
+
+
+	//slider
+	const sliderscataloglk = document.querySelectorAll(".slider-cataloglk");
+	
+	sliderscataloglk.forEach((container) => {
+		const swiperEl = container.querySelector(".swiper");
+		const paginationEl = container.querySelector(".slider-cataloglk-pagination");
+	
+		if (!swiperEl) return;
+	
+		new Swiper(swiperEl, {
+			loop: false,
+			slidesPerGroup: 1,
+			slidesPerView: 'auto',
+			spaceBetween: 0,
+			autoHeight: false,
+			speed: 400,
+			pagination: {
+				el: paginationEl,
+				clickable: true,
+			},
+			autoplay: false,
+			navigation: false,
+		});
+	});
+	
+	
 });

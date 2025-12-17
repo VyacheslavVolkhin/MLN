@@ -27,7 +27,7 @@
 
 <body>
     <!-- wrap -->
-    <div class="wrap">
+    <div class="wrap wrap-inner">
 
 
         <!-- header -->
@@ -1471,61 +1471,166 @@
         </div>
         <!--/panel-mobile-box-->
 
-        <!-- page -->
+        <!--page-full-->
         <div class="page-full">
-            <br><br><br><br><br>
-            <style>
-                .li-new:before {
-                    background-color: var(--clr-att-second);
-                }
 
-                .li-new a:not(:hover) {
-                    color: var(--clr-att-second);
-                }
-            </style>
-            <ul style="font-size: 2em;line-height: 1.4;">
-                <li><a href="main.html">Главная</a></li>
-                <li><a href="card.html">Карточка товара</a></li>
-                <li><a href="catalog.html">Каталог</a></li>
-                <li class=""><a href="catalog-clear.html">Каталог без банера</a></li>
-                <li class=""><a href="cart.html">Корзина</a></li>
-                <li class=""><a href="order.html">Оформление заказа</a></li>
-                <li class=""><a href="order-succefull.html">Оформление заказа - успешно</a></li>
-                <li>--------</li>
-                <li>--------Личный кабинет-----------</li>
-                <li class=""><a href="lk01.html">Личный кабинет - 01</a></li>
-                <li class=""><a href="lk02.html">Личный кабинет - 02</a></li>
-                <li class=""><a href="lk03.html">Личный кабинет - 03</a></li>
-                <li class=""><a href="lk04.html">Личный кабинет - 04</a></li>
-                <li class=""><a href="lk05.html">Личный кабинет - 05</a></li>
-                <li class=""><a href="lk06.html">Личный кабинет - 06</a></li>
-                <li class=""><a href="lk07.html">Личный кабинет - 07</a></li>
-                <li class=""><a href="lk08.html">Личный кабинет - 08</a></li>
-                <li>--------</li>
-                <li class=""><a href="" class="js-popup-open" data-popup="popup-auth-for-order">Popup "Войдите или зарегистрируйтесь чтобы оформить заказ с выгодой:" </a></li>
-                <li class=""><a href="" class="js-popup-open" data-popup="popup-auth-for-order-code">Popup "Введите код из СМС" </a></li>
-                <li>--------</li>
-                <li><a href="" class="js-popup-open" data-popup="popup-feature-item">Popup "Подробнее о составе" </a></li>
-                <li><a href="" class="js-popup-open" data-popup="popup-card-composition">Popup "Состав" </a></li>
-                <li class=""><a href="" class="js-popup-open" data-popup="popup-fast-order">Popup "Быстрый заказ"</a></li>
-                <li class=""><a href="" class="js-popup-open" data-popup="popup-cart-added">Popup "Добавлено в корзину"</a></li>
-                <li><a href="" class="js-popup-open" data-popup="popup-succefull-message">Popup "Заказ успешно оформлен"</a></li>
-                <li>--------</li>
-                <li><a href="" class="js-popup-open" data-popup="popup-succefull-message">Popup "Войдите или зарегистрируйтесь чтобы оформить заказ с выгодой"</a></li>
-                <li>--------</li>
-                <li><a href="" class="js-popup-open" data-popup="popup-contacts">Popup "Наши магазины"</a></li>
-                <li>--------</li>
-                <li><a href="" class="js-popup-open" data-popup="popup-reg">Popup "Регистрация"</a></li>
-                <li><a href="" class="js-popup-open" data-popup="popup-succefull-reg">Popup "Регистрация успешно"</a></li>
-                <li><a href="" class="js-popup-open" data-popup="popup-login">Popup "Вход"</a></li>
-                <li><a href="" class="js-popup-open" data-popup="popup-password-remember">Popup "Восстановление пароля"</a></li>
-                <li><a href="" class="js-popup-open" data-popup="popup-password-new">Popup "Новый пароль"</a></li>
-                <li><a href="" class="js-popup-open" data-popup="popup-code">Popup "Введите проверочный код"</a></li>
-                <li><a href="" class="js-popup-open" data-popup="popup-succefull-password">Popup "Проверьте почту (пароль)"</a></li>
-            </ul>
-            <br><br><br><br><br>
+            <!--breadcrumbs-box-->
+            <div class="breadcrumbs-box">
+                <ol class="menu">
+                    <li><a href="">Главная</a></li>
+                    <li><a href="">Личный кабинет</a></li>
+                </ol>
+            </div>
+            <!--/breadcrumbs-box-->
+
+            <!--title-box-->
+            <div class="title-box">
+                <div class="title-wrap">
+                    <h1 class="page-title section-title title-medium">Мои заказы</h1>
+                </div>
+                <div class="action-wrap">
+                    <a href="" class="btn button-border elm-hidden-mobile">
+                        <div class="button-ico">
+                            <img src="./img/icons/exit.svg" alt="">
+                        </div>
+                        <div class="button-title">Выйти из ЛК</div>
+                    </a>
+                    <a href="" class="btn btn-action-ico ico-menu button-menu-toggle js-btn-menu-toggle elm-hidden-desktop"></a>
+                </div>
+            </div>
+            <!--/title-box-->
+
+            <!--content-outer-wrap-->
+            <div class="content-outer-wrap section-lk">
+
+                <!--content-wrap-->
+                <div class="content-wrap">
+
+                    <!--empty-box-->
+                    <div class="empty-box">
+                        <div class="elm-ico">
+                            <img src="./img/icons/added.svg" alt="">
+                        </div>
+                        <div class="section-title">Заказы отсутствуют!</div>
+                        <p>Посмотрите наш каталог, чтобы сделать первый заказ!</p>
+                        <a href="" class="btn">
+                            <div class="button-title">Перейти в каталог</div>
+                        </a>
+                    </div>
+                    <!--/empty-box-->
+
+                </div>
+                <!--/content-wrap-->
+
+                <!--side-wrap-->
+                <div class="side-wrap">
+
+                    <!--side-profile-box-->
+                    <div class="side-profile-box elm-hidden-mobile">
+                        <div class="photo-inner-wrap">
+                            <div class="elm-photo photo-cover">
+                                <img src="./img/profile.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="title-inner-wrap">
+                            <div class="section-title">Иванова Светлана</div>
+                        </div>
+                        <div class="action-inner-wrap">
+                            <a href="" class="btn button-link">
+                                <div class="button-ico">
+                                    <img src="./img/icons/edit.svg" alt="">
+                                </div>
+                                <div class="button-title">Редактировать профиль</div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--/side-profile-box-->
+
+                    <!--side-menu-box-->
+                    <div class="side-menu-box">
+                        <div class="title-inner-wrap">
+                            <div class="section-title">Разделы ЛК</div>
+                            <a href="" class="btn-popup-close btn-action-ico ico-close btn-green js-btn-menu-toggle"></a>
+                        </div>
+                        <div class="menu-inner-wrap">
+                            <ul class="menu">
+                                <li>
+                                    <a href="" class="btn-menu">
+                                        <div class="button-ico">
+                                            <img src="./img/icons/lk-menu01.svg" alt="">
+                                        </div>
+                                        <div class="button-title">Личный кабинет</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="btn-menu">
+                                        <div class="button-ico">
+                                            <img src="./img/icons/lk-menu02.svg" alt="">
+                                        </div>
+                                        <div class="button-title">Заказы</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="btn-menu">
+                                        <div class="button-ico">
+                                            <img src="./img/icons/lk-menu03.svg" alt="">
+                                        </div>
+                                        <div class="button-title">Программа лояльности</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="btn-menu">
+                                        <div class="button-ico">
+                                            <img src="./img/icons/lk-menu04.svg" alt="">
+                                        </div>
+                                        <div class="button-title">Избранное</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="btn-menu">
+                                        <div class="button-ico">
+                                            <img src="./img/icons/lk-menu05.svg" alt="">
+                                        </div>
+                                        <div class="button-title">Важные даты</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="btn-menu">
+                                        <div class="button-ico">
+                                            <img src="./img/icons/lk-menu06.svg" alt="">
+                                        </div>
+                                        <div class="button-title">Получатели</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="btn-menu">
+                                        <div class="button-ico">
+                                            <img src="./img/icons/lk-menu07.svg" alt="">
+                                        </div>
+                                        <div class="button-title">Подписки</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="btn-menu">
+                                        <div class="button-ico">
+                                            <img src="./img/icons/lk-menu08.svg" alt="">
+                                        </div>
+                                        <div class="button-title">Цветочный счет <span class="button-title-up">NEW</span></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--/side-menu-box-->
+
+                </div>
+                <!--/side-wrap-->
+
+            </div>
+            <!--/content-outer-wrap-->
+
         </div>
-        <!-- /page -->
+        <!--/page-full-->
 
 
         <!-- footer -->

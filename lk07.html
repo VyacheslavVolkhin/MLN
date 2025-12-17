@@ -27,7 +27,7 @@
 
 <body>
     <!-- wrap -->
-    <div class="wrap">
+    <div class="wrap wrap-inner">
 
 
         <!-- header -->
@@ -1471,61 +1471,515 @@
         </div>
         <!--/panel-mobile-box-->
 
-        <!-- page -->
+        <!--page-full-->
         <div class="page-full">
-            <br><br><br><br><br>
-            <style>
-                .li-new:before {
-                    background-color: var(--clr-att-second);
-                }
 
-                .li-new a:not(:hover) {
-                    color: var(--clr-att-second);
-                }
-            </style>
-            <ul style="font-size: 2em;line-height: 1.4;">
-                <li><a href="main.html">Главная</a></li>
-                <li><a href="card.html">Карточка товара</a></li>
-                <li><a href="catalog.html">Каталог</a></li>
-                <li class=""><a href="catalog-clear.html">Каталог без банера</a></li>
-                <li class=""><a href="cart.html">Корзина</a></li>
-                <li class=""><a href="order.html">Оформление заказа</a></li>
-                <li class=""><a href="order-succefull.html">Оформление заказа - успешно</a></li>
-                <li>--------</li>
-                <li>--------Личный кабинет-----------</li>
-                <li class=""><a href="lk01.html">Личный кабинет - 01</a></li>
-                <li class=""><a href="lk02.html">Личный кабинет - 02</a></li>
-                <li class=""><a href="lk03.html">Личный кабинет - 03</a></li>
-                <li class=""><a href="lk04.html">Личный кабинет - 04</a></li>
-                <li class=""><a href="lk05.html">Личный кабинет - 05</a></li>
-                <li class=""><a href="lk06.html">Личный кабинет - 06</a></li>
-                <li class=""><a href="lk07.html">Личный кабинет - 07</a></li>
-                <li class=""><a href="lk08.html">Личный кабинет - 08</a></li>
-                <li>--------</li>
-                <li class=""><a href="" class="js-popup-open" data-popup="popup-auth-for-order">Popup "Войдите или зарегистрируйтесь чтобы оформить заказ с выгодой:" </a></li>
-                <li class=""><a href="" class="js-popup-open" data-popup="popup-auth-for-order-code">Popup "Введите код из СМС" </a></li>
-                <li>--------</li>
-                <li><a href="" class="js-popup-open" data-popup="popup-feature-item">Popup "Подробнее о составе" </a></li>
-                <li><a href="" class="js-popup-open" data-popup="popup-card-composition">Popup "Состав" </a></li>
-                <li class=""><a href="" class="js-popup-open" data-popup="popup-fast-order">Popup "Быстрый заказ"</a></li>
-                <li class=""><a href="" class="js-popup-open" data-popup="popup-cart-added">Popup "Добавлено в корзину"</a></li>
-                <li><a href="" class="js-popup-open" data-popup="popup-succefull-message">Popup "Заказ успешно оформлен"</a></li>
-                <li>--------</li>
-                <li><a href="" class="js-popup-open" data-popup="popup-succefull-message">Popup "Войдите или зарегистрируйтесь чтобы оформить заказ с выгодой"</a></li>
-                <li>--------</li>
-                <li><a href="" class="js-popup-open" data-popup="popup-contacts">Popup "Наши магазины"</a></li>
-                <li>--------</li>
-                <li><a href="" class="js-popup-open" data-popup="popup-reg">Popup "Регистрация"</a></li>
-                <li><a href="" class="js-popup-open" data-popup="popup-succefull-reg">Popup "Регистрация успешно"</a></li>
-                <li><a href="" class="js-popup-open" data-popup="popup-login">Popup "Вход"</a></li>
-                <li><a href="" class="js-popup-open" data-popup="popup-password-remember">Popup "Восстановление пароля"</a></li>
-                <li><a href="" class="js-popup-open" data-popup="popup-password-new">Popup "Новый пароль"</a></li>
-                <li><a href="" class="js-popup-open" data-popup="popup-code">Popup "Введите проверочный код"</a></li>
-                <li><a href="" class="js-popup-open" data-popup="popup-succefull-password">Popup "Проверьте почту (пароль)"</a></li>
-            </ul>
-            <br><br><br><br><br>
+            <!--breadcrumbs-box-->
+            <div class="breadcrumbs-box">
+                <ol class="menu">
+                    <li><a href="">Главная</a></li>
+                    <li><a href="">Личный кабинет</a></li>
+                </ol>
+            </div>
+            <!--/breadcrumbs-box-->
+
+            <!--title-box-->
+            <div class="title-box">
+                <div class="title-wrap">
+                    <h1 class="page-title section-title title-medium">Мои заказы</h1>
+                </div>
+                <div class="action-wrap">
+                    <a href="" class="btn button-border elm-hidden-mobile">
+                        <div class="button-ico">
+                            <img src="./img/icons/exit.svg" alt="">
+                        </div>
+                        <div class="button-title">Выйти из ЛК</div>
+                    </a>
+                    <a href="" class="btn btn-action-ico ico-menu button-menu-toggle js-btn-menu-toggle elm-hidden-desktop"></a>
+                </div>
+            </div>
+            <!--/title-box-->
+
+            <!--content-outer-wrap-->
+            <div class="content-outer-wrap section-lk">
+
+                <!--content-wrap-->
+                <div class="content-wrap">
+
+                    <!--title-box-->
+                    <div class="title-box">
+                        <div class="tabs-wrap tabs-mobile-full">
+                            <ul class="menu">
+                                <li>
+                                    <a href="" class="btn button-light button-border">
+                                        <div class="button-title">Текущие заказы (2)</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="btn button-light button-border active">
+                                        <div class="button-title">История заказов</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--/title-box-->
+
+                    <!--tabs-box-->
+                    <div class="tabs-box tabs-scroll-mobile">
+                        <ul class="menu">
+                            <li>
+                                <a href="" class="btn button-tab button-tab-small active">
+                                    <div class="button-title">2025</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="btn button-tab button-tab-small">
+                                    <div class="button-title">2024</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="btn button-tab button-tab-small">
+                                    <div class="button-title">2023</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="btn button-tab button-tab-small">
+                                    <div class="button-title">2022</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="btn button-tab button-tab-small">
+                                    <div class="button-title">2021</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--/tabs-box-->
+
+                    <!--order-lk-box-->
+                    <div class="order-lk-box">
+                        <!--order-header-wrap-->
+                        <div class="order-header-wrap">
+                            <div class="order-main-wrap">
+                                <div class="title-inner-wrap">
+                                    <div class="order-title">Заказ №1521-2565</div>
+                                    <div class="order-info">09.11.2025</div>
+                                </div>
+                                <div class="actions-inner-wrap">
+                                    <div class="order-status">
+                                        <div class="elm-status type-completed">Доставлен</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-info-wrap">
+                                <div class="order-info-title">Самовывоз</div>
+                                <p>г. Екатеринбург, ул. Малышева, 64</p>
+                                <div class="order-info-title">Дата и время доставки</div>
+                                <p>15.11.2025 (с 09:00 до 11:00)</p>
+                                <div class="order-info-title">Способ оплаты</div>
+                                <p>Оплата картой на сайте</p>
+                            </div>
+                            <div class="order-summary-wrap">
+                                <div class="order-photos-wrap" data-count-title="+2">
+                                    <div class="photos-wrap">
+                                        <a href="" class="elm-photo photo-cover">
+                                            <img src="./img/cat01-02.jpg" alt="">
+                                        </a>
+                                        <a href="" class="elm-photo photo-cover">
+                                            <img src="./img/cat01-03.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="order-price-wrap">
+                                    <div class="order-price-title">Стоимость заказа</div>
+                                    <div class="elm-price" data-unit=" ₽">128 000</div>
+                                </div>
+                            </div>
+                            <a href="" class="order-button-toggle btn-action-ico ico-arrow-toggle js-btn-tgl"></a>
+                        </div>
+                        <!--/order-header-wrap-->
+                        <!--order-items-wrap-->
+                        <div class="order-items-wrap">
+                            <div class="order-items-title-wrap">
+                                <div class="order-items-title">Состав заказа</div>
+                            </div>
+                            <div class="items-wrap">
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-cart">
+                                        <div class="tile-photo-wrap">
+                                            <div class="tile-photo photo-cover">
+                                                <img src="./img/cat01-02.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="tile-info-wrap">
+                                            <div class="tile-inner-wrap">
+                                                <div class="tile-title-wrap">
+                                                    <div class="tile-title"><a href="">Букет "Нежность лилий" (Базовый)</a></div>
+                                                </div>
+                                                <div class="tile-select-wrap">
+                                                    <div class="frm-select-button type-small">
+                                                        <input type="radio" name="popupselect01" id="popupselect01-01" checked="">
+                                                        <label for="popupselect01-01">Базовый</label>
+                                                    </div>
+                                                    <div class="frm-select-button type-small">
+                                                        <input type="radio" name="popupselect01" id="popupselect01-02">
+                                                        <label for="popupselect01-02">+30% цветов</label>
+                                                    </div>
+                                                    <div class="frm-select-button type-small">
+                                                        <input type="radio" name="popupselect01" id="popupselect01-03">
+                                                        <label for="popupselect01-03">+60% цветов</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tile-price-wrap">
+                                                <div class="tile-price-info">За 1 шт. = <div class="tile-price price-att" data-unit=" ₽">4 000</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tile-side-wrap">
+                                            <div class="tile-counter-wrap">
+                                                <div class="frm-field-counter js-counter">
+                                                    <button class="js-button-counter-plus btn-action-ico ico-plus button-plus"></button>
+                                                    <button class="js-button-counter-minus btn-action-ico ico-minus button-minus"></button>
+                                                    <input type="text" value="2" class="form-input js-input-counter" data-unit="" data-step="1" data-min="0" data-max="15">
+                                                </div>
+                                            </div>
+                                            <div class="tile-total-wrap">
+                                                <div class="tile-price price-att" data-unit=" ₽">8 000</div>
+                                                <div class="tile-price price-old" data-unit=" ₽">12 000</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-cart">
+                                        <div class="tile-photo-wrap">
+                                            <div class="tile-photo photo-cover">
+                                                <img src="./img/cat01-03.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="tile-info-wrap">
+                                            <div class="tile-inner-wrap">
+                                                <div class="tile-title-wrap">
+                                                    <div class="tile-title"><a href="">Букет "Сладость" (+30%)</a></div>
+                                                </div>
+                                                <div class="tile-select-wrap">
+                                                    <div class="frm-select-button type-small">
+                                                        <input type="radio" name="popupselect02" id="popupselect02-01">
+                                                        <label for="popupselect02-01">Базовый</label>
+                                                    </div>
+                                                    <div class="frm-select-button type-small">
+                                                        <input type="radio" name="popupselect02" id="popupselect02-02" checked>
+                                                        <label for="popupselect02-02">+30% цветов</label>
+                                                    </div>
+                                                    <div class="frm-select-button type-small">
+                                                        <input type="radio" name="popupselect02" id="popupselect02-03">
+                                                        <label for="popupselect02-03">+60% цветов</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tile-price-wrap">
+                                                <div class="tile-price-info">За 1 шт. = <div class="tile-price price-att" data-unit=" ₽">60 000</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tile-side-wrap">
+                                            <div class="tile-counter-wrap">
+                                                <div class="frm-field-counter js-counter">
+                                                    <button class="js-button-counter-plus btn-action-ico ico-plus button-plus"></button>
+                                                    <button class="js-button-counter-minus btn-action-ico ico-minus button-minus"></button>
+                                                    <input type="text" value="2" class="form-input js-input-counter" data-unit="" data-step="1" data-min="0" data-max="15">
+                                                </div>
+                                            </div>
+                                            <div class="tile-total-wrap">
+                                                <div class="tile-price price-att" data-unit=" ₽">120 000</div>
+                                                <div class="tile-price price-old" data-unit=" ₽">140 000</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                            </div>
+                        </div>
+                        <!--/order-items-wrap-->
+                    </div>
+                    <!--/order-lk-box-->
+
+                    <!--order-lk-box-->
+                    <div class="order-lk-box">
+                        <!--order-header-wrap-->
+                        <div class="order-header-wrap">
+                            <div class="order-main-wrap">
+                                <div class="title-inner-wrap">
+                                    <div class="order-title">Заказ №1521-2565</div>
+                                    <div class="order-info">09.11.2025</div>
+                                </div>
+                                <div class="actions-inner-wrap">
+                                    <div class="order-status">
+                                        <div class="elm-status type-completed">Доставлен</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-info-wrap">
+                                <div class="order-info-title">Самовывоз</div>
+                                <p>г. Екатеринбург, ул. Малышева, 64</p>
+                                <div class="order-info-title">Дата и время доставки</div>
+                                <p>15.11.2025 (с 09:00 до 11:00)</p>
+                                <div class="order-info-title">Способ оплаты</div>
+                                <p>Оплата картой на сайте</p>
+                            </div>
+                            <div class="order-summary-wrap">
+                                <div class="order-photos-wrap" data-count-title="+2">
+                                    <a href="" class="elm-photo photo-cover">
+                                        <img src="./img/cat01-02.jpg" alt="">
+                                    </a>
+                                    <a href="" class="elm-photo photo-cover">
+                                        <img src="./img/cat01-03.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="order-price-wrap">
+                                    <div class="order-price-title">Стоимость заказа</div>
+                                    <div class="elm-price" data-unit=" ₽">128 000</div>
+                                </div>
+                            </div>
+                            <a href="" class="order-button-toggle btn-action-ico ico-arrow-toggle js-btn-tgl"></a>
+                        </div>
+                        <!--/order-header-wrap-->
+                        <!--order-items-wrap-->
+                        <div class="order-items-wrap">
+                            <div class="order-items-title-wrap">
+                                <div class="order-items-title">Состав заказа</div>
+                            </div>
+                            <div class="items-wrap">
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-cart">
+                                        <div class="tile-photo-wrap">
+                                            <div class="tile-photo photo-cover">
+                                                <img src="./img/cat01-02.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="tile-info-wrap">
+                                            <div class="tile-inner-wrap">
+                                                <div class="tile-title-wrap">
+                                                    <div class="tile-title"><a href="">Букет "Нежность лилий" (Базовый)</a></div>
+                                                </div>
+                                                <div class="tile-select-wrap">
+                                                    <div class="frm-select-button type-small">
+                                                        <input type="radio" name="popupselect01" id="popupselect01-01" checked="">
+                                                        <label for="popupselect01-01">Базовый</label>
+                                                    </div>
+                                                    <div class="frm-select-button type-small">
+                                                        <input type="radio" name="popupselect01" id="popupselect01-02">
+                                                        <label for="popupselect01-02">+30% цветов</label>
+                                                    </div>
+                                                    <div class="frm-select-button type-small">
+                                                        <input type="radio" name="popupselect01" id="popupselect01-03">
+                                                        <label for="popupselect01-03">+60% цветов</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tile-price-wrap">
+                                                <div class="tile-price-info">За 1 шт. = <div class="tile-price price-att" data-unit=" ₽">4 000</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tile-side-wrap">
+                                            <div class="tile-counter-wrap">
+                                                <div class="frm-field-counter js-counter">
+                                                    <button class="js-button-counter-plus btn-action-ico ico-plus button-plus"></button>
+                                                    <button class="js-button-counter-minus btn-action-ico ico-minus button-minus"></button>
+                                                    <input type="text" value="2" class="form-input js-input-counter" data-unit="" data-step="1" data-min="0" data-max="15">
+                                                </div>
+                                            </div>
+                                            <div class="tile-total-wrap">
+                                                <div class="tile-price price-att" data-unit=" ₽">8 000</div>
+                                                <div class="tile-price price-old" data-unit=" ₽">12 000</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap">
+                                    <div class="item-tile-cart">
+                                        <div class="tile-photo-wrap">
+                                            <div class="tile-photo photo-cover">
+                                                <img src="./img/cat01-03.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="tile-info-wrap">
+                                            <div class="tile-inner-wrap">
+                                                <div class="tile-title-wrap">
+                                                    <div class="tile-title"><a href="">Букет "Сладость" (+30%)</a></div>
+                                                </div>
+                                                <div class="tile-select-wrap">
+                                                    <div class="frm-select-button type-small">
+                                                        <input type="radio" name="popupselect02" id="popupselect02-01">
+                                                        <label for="popupselect02-01">Базовый</label>
+                                                    </div>
+                                                    <div class="frm-select-button type-small">
+                                                        <input type="radio" name="popupselect02" id="popupselect02-02" checked>
+                                                        <label for="popupselect02-02">+30% цветов</label>
+                                                    </div>
+                                                    <div class="frm-select-button type-small">
+                                                        <input type="radio" name="popupselect02" id="popupselect02-03">
+                                                        <label for="popupselect02-03">+60% цветов</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tile-price-wrap">
+                                                <div class="tile-price-info">За 1 шт. = <div class="tile-price price-att" data-unit=" ₽">60 000</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tile-side-wrap">
+                                            <div class="tile-counter-wrap">
+                                                <div class="frm-field-counter js-counter">
+                                                    <button class="js-button-counter-plus btn-action-ico ico-plus button-plus"></button>
+                                                    <button class="js-button-counter-minus btn-action-ico ico-minus button-minus"></button>
+                                                    <input type="text" value="2" class="form-input js-input-counter" data-unit="" data-step="1" data-min="0" data-max="15">
+                                                </div>
+                                            </div>
+                                            <div class="tile-total-wrap">
+                                                <div class="tile-price price-att" data-unit=" ₽">120 000</div>
+                                                <div class="tile-price price-old" data-unit=" ₽">140 000</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                            </div>
+                        </div>
+                        <!--/order-items-wrap-->
+                    </div>
+                    <!--/order-lk-box-->
+                    <!--more-inner-wrap-->
+                    <div class="more-box text-left">
+                        <div class="more-inner-wrap">
+                            <a href="" class="btn">
+                                <div class="button-title">Показать все</div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--/more-inner-wrap-->
+
+                </div>
+                <!--/content-wrap-->
+
+                <!--side-wrap-->
+                <div class="side-wrap">
+
+                    <!--side-profile-box-->
+                    <div class="side-profile-box elm-hidden-mobile">
+                        <div class="photo-inner-wrap">
+                            <div class="elm-photo photo-cover">
+                                <img src="./img/profile.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="title-inner-wrap">
+                            <div class="section-title">Иванова Светлана</div>
+                        </div>
+                        <div class="action-inner-wrap">
+                            <a href="" class="btn button-link">
+                                <div class="button-ico">
+                                    <img src="./img/icons/edit.svg" alt="">
+                                </div>
+                                <div class="button-title">Редактировать профиль</div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--/side-profile-box-->
+
+                    <!--side-menu-box-->
+                    <div class="side-menu-box">
+                        <div class="title-inner-wrap">
+                            <div class="section-title">Разделы ЛК</div>
+                            <a href="" class="btn-popup-close btn-action-ico ico-close btn-green js-btn-menu-toggle"></a>
+                        </div>
+                        <div class="menu-inner-wrap">
+                            <ul class="menu">
+                                <li>
+                                    <a href="" class="btn-menu">
+                                        <div class="button-ico">
+                                            <img src="./img/icons/lk-menu01.svg" alt="">
+                                        </div>
+                                        <div class="button-title">Личный кабинет</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="btn-menu">
+                                        <div class="button-ico">
+                                            <img src="./img/icons/lk-menu02.svg" alt="">
+                                        </div>
+                                        <div class="button-title">Заказы</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="btn-menu">
+                                        <div class="button-ico">
+                                            <img src="./img/icons/lk-menu03.svg" alt="">
+                                        </div>
+                                        <div class="button-title">Программа лояльности</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="btn-menu">
+                                        <div class="button-ico">
+                                            <img src="./img/icons/lk-menu04.svg" alt="">
+                                        </div>
+                                        <div class="button-title">Избранное</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="btn-menu">
+                                        <div class="button-ico">
+                                            <img src="./img/icons/lk-menu05.svg" alt="">
+                                        </div>
+                                        <div class="button-title">Важные даты</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="btn-menu">
+                                        <div class="button-ico">
+                                            <img src="./img/icons/lk-menu06.svg" alt="">
+                                        </div>
+                                        <div class="button-title">Получатели</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="btn-menu">
+                                        <div class="button-ico">
+                                            <img src="./img/icons/lk-menu07.svg" alt="">
+                                        </div>
+                                        <div class="button-title">Подписки</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="btn-menu">
+                                        <div class="button-ico">
+                                            <img src="./img/icons/lk-menu08.svg" alt="">
+                                        </div>
+                                        <div class="button-title">Цветочный счет <span class="button-title-up">NEW</span></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--/side-menu-box-->
+
+                </div>
+                <!--/side-wrap-->
+
+            </div>
+            <!--/content-outer-wrap-->
+
         </div>
-        <!-- /page -->
+        <!--/page-full-->
 
 
         <!-- footer -->
