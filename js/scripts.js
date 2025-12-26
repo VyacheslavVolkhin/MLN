@@ -562,7 +562,7 @@ document.addEventListener("DOMContentLoaded", function () {
       loop: false,
       slidesPerView: 1,
       spaceBetween: 0,
-      autoHeight: false,
+      autoHeight: true,
       speed: 400,
       pagination: {
         el: paginationEl,

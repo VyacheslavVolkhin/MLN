@@ -245,7 +245,7 @@ html.with-fancybox body.hide-scrollbar {
 		margin-bottom: 24px;
 	}
 	.menu-wrap {
-		width: calc(50% - (24/2px));
+		width: calc(50% - 12px);
 		&:last-child {
 			width: 100%;
 		}
@@ -824,9 +824,9 @@ html.with-fancybox body.hide-scrollbar {
 @media (min-width: 768px) {
 	.footer-main-panel {
 		.menu-wrap {
-			width: calc(33.33% - (24*2/3px));
+			width: calc(33.33% - 16px);
 			&:last-child {
-				width: calc(33.33% - (24*2/3px));
+				width: calc(33.33% - 16px);
 			}
 		}
 	}
@@ -934,6 +934,9 @@ html.with-fancybox body.hide-scrollbar {
 	}
 	.menu-show {
 		overflow: hidden;
+	}
+	.header .action-search .btn-action-ico:not(.active)~.popup-content-block {
+		transform: translate(200px,-50%)
 	}
 	.popup-catalog-wrap {
 		position: static;
@@ -1400,7 +1403,7 @@ html.with-fancybox body.hide-scrollbar {
 @media (min-width: 1024px) and (max-width: 1199px) {
 	.footer-main-panel {
 		.menu-wrap {
-			width: calc(50% - (24/2px));
+			width: calc(50% - 12px);
 			&:last-child {
 				width: 100%;
 			}

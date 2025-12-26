@@ -15,6 +15,20 @@
 	&+.more-box {
 		margin-top: 30px;
 	}
+	.order-comment-wrap {
+		font-size: 16px;
+		line-height: (19/16);
+		color: var(--clr-light);
+		border-top: 1px dashed #CECECE;
+		border-bottom: 1px dashed #CECECE;
+		padding-top: 14px;
+		padding-bottom: 14px;
+		margin-top: 15px;
+		&+.order-items-wrap {
+			border-top: none !important;
+			margin-top: 0 !important;
+		}
+	}
 	.order-items-wrap {
 		border-top: 1px dashed #CECECE;
 		padding: 20px 0 0 0;
@@ -22,6 +36,13 @@
 	}
 	.order-items-title-wrap {
 		margin-bottom: 15px;
+	}
+	.order-comment-title {
+		display: block;
+		font-size: 15px;
+		font-weight: 500;
+		margin-bottom: 6px;
+		color: var(--clr-base);
 	}
 	.order-items-title {
 		font-size: 20px;
@@ -1390,8 +1411,84 @@
 	margin-bottom: var(--sectionMargin);
 	position: relative;
 	.sl-wrap {
+		&:has(.slider-text-wrap) {
+			aspect-ratio: inherit;
+		}
+	}
+	.bg-inner-wrap {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: -300px;
+	}
+	.slider-text-wrap {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
+		padding: 60px 42px;
+		min-height: 640px;
+		align-items: center;
+	}
+	.slider-text-content {
+		display: block;
+		border-radius: 31px;
+		background: rgba(255, 255, 255, 0.61);
+		box-shadow: 0 4px 76px 0 rgba(0, 0, 0, 0.02);
+		backdrop-filter: blur(10px);
+		padding: 50px 50px;
+		position: relative;
+		flex-shrink: 0;
+		z-index: 2;
+		width: 100%;
+		max-width: 472px;
+		text-align: center;
+		font-size: 25px;
+		font-weight: 600;
+		line-height: (30/25);
+	}
+	.slider-attention {
+		display: inline-block;
+		position: relative;
+		z-index: 2;
+		color: #fff;
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: -0.25em;
+			bottom: -0.2em;
+			left: -0.7em;
+			right: -0.7em;
+			z-index: -1;
+			border-radius: (12/25em);
+			background: var(--clr-att);
+		}
+	}
+	.slider-title {
+		display: block;
+		font-size: 36px;
+		line-height: (38/36);
+		font-weight: bold;
+		color: inherit;
+		margin: 0 0 0.5em 0;
+	}
+	.sl-wrap {
+		display: flex;
+		flex-direction: column;
+		&:has(.elm-photo:only-child) {
+			aspect-ratio: inherit;
+			.elm-photo {
+				width: 100%;
+				height: auto;
+				aspect-ratio: inherit;
+				position: relative;
+				top: auto;
+				bottom: auto;
+				left: auto;
+				right: auto;
+			}
+		}
 	}
 	.sl-inner-wrap {
 		display: flex;
@@ -2877,6 +2974,21 @@
 		}
 	}
 }
+@media (max-width: 479px) {
+	.main-slider-box {
+		.slider-text-wrap {
+			padding-left: var(--paddingContainer);
+			padding-right: var(--paddingContainer);
+		}
+		.slider-text-content {
+			padding: 30px;
+			font-size: 20px;
+		}
+		.slider-title {
+			font-size: 30px;
+		}
+	}
+}
 @media (max-width: 389px) {
 	.tabs-box {
 		.button-tab {
@@ -3069,6 +3181,9 @@
 		}
 	}
 	.main-slider-box {
+		.bg-inner-wrap {
+			right: -480px;
+		}
 		.sl-wrap {
 			aspect-ratio: 1920/703;
 		}
@@ -3481,6 +3596,9 @@
 		margin-bottom: 4.5rem;
 	}
 	.main-slider-box {
+		.slider-text-wrap {
+			align-items: flex-end;
+		}
 		.sl-title-wrap {
 			font-size: 24px;
 			line-height: (27/32);
@@ -3760,6 +3878,9 @@
 @media (min-width: 1200px) and (max-width: 1399px) {
 	.order-lk-box {
 		.item-tile-cart {
+			&.tile-gift {
+				align-items: center;
+			}
 			.tile-side-wrap {
 				display: flex;
 				flex-direction: column;
@@ -3971,6 +4092,32 @@
 		}
 	}
 	.main-slider-box {
+		.bg-inner-wrap {
+			right: 0;
+		}
+		.slider-text-wrap {
+			min-height: 656px;
+		}
+		.slider-text-content {
+			width: 77.2rem;
+			max-width: inherit;
+			padding: 6rem 7rem 7rem 7rem;
+			font-size: 3.6rem;
+			text-align: left;
+		}
+		.slider-attention {
+			margin-left: 0.4em;
+			&:before {
+				top: -0.15em;
+				bottom: -0.1em;
+				left: -0.4em;
+				right: -0.4em;
+				border-radius: 12px;
+			}
+		}
+		.slider-title {
+			font-size: 6.7rem;
+		}
 		.sl-title-wrap {
 			font-size: 32px;
 		}
@@ -4033,6 +4180,9 @@
 	}
 }
 @media (min-width: 1600px) {
+	.main-slider-box {
+		
+	}
 	.info-card-box {
 		.action-wrap {
 			min-width: 19rem;
@@ -4051,6 +4201,11 @@
 	.main-slider-box {
 		.sl-arrows-wrap {
 			display: block;
+		}
+		.slider-text-wrap {
+			padding-left: 51%;
+			padding-right: 0;
+			align-items: flex-start;
 		}
 	}
 }
